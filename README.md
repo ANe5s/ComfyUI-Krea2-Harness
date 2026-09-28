@@ -1,4 +1,5 @@
 ![Krea 2 result 00111](./Picture/ComfyUI_00251_1_.png)
+Prompt：一道抽象的光束蜿蜒曲折横着穿过画面中心，流动感，概念图 （Analog Cobalt Nocturne）
 # ComfyUI-Krea-Harness
 The Krea Harness Alpha for ComfyUI is currently under development. Get ready to unleash your creativity with moodboards!
 
