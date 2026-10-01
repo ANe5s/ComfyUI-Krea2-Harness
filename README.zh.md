@@ -55,7 +55,7 @@
 
 | M87 LoRA 0.8 | M87 LoRA 1.0 |
 | --- | --- |
-| ![M87 LoRA 0.8 生成结果](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/Krea2_identity_moodboard_verified_21x9_00526_.png) | ![M87 LoRA 1.0 生成结果](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/Krea2_identity_moodboard_verified_21x9_00524_.png) |
+| ![M87 LoRA 0.8 生成结果](assets/readme/showcase/Krea2_identity_moodboard_verified_21x9_00526_.png) | ![M87 LoRA 1.0 生成结果](assets/readme/showcase/Krea2_identity_moodboard_verified_21x9_00524_.png) |
 
 ### 古风女剑仙 · M87 LoRA、realism\_engine\_krea2\_v3.1 Lora
 
@@ -63,13 +63,13 @@
 
 | 生成结果 1 | 生成结果 2 |
 | --- | --- |
-| ![白衣女剑仙生成结果一](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/ComfyUI_00215_.png) | ![白衣女剑仙生成结果二](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/ComfyUI_00224_.png) |
+| ![白衣女剑仙生成结果一](assets/readme/showcase/ComfyUI_00215_.png) | ![白衣女剑仙生成结果二](assets/readme/showcase/ComfyUI_00224_.png) |
 
 ### 赛博朋克摩托追逐 · M87 LoRA、realism\_engine\_krea2\_v3.1 Lora
 
 提示词：一位亚裔女性骑着摩托穿行于赛博朋克都市，在超过左侧汽车的瞬间回头大笑，远处车辆爆炸；厚涂漫画风格、复杂笔触、鱼眼超广角。（选择Moodboards的Dynamic Ink Fantasy样式）
 
-![赛博朋克摩托追逐生成结果](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/ComfyUI_00232_.png)
+![赛博朋克摩托追逐生成结果](assets/readme/showcase/ComfyUI_00232_.png)
 
 ### 四象限分镜 · M87 LoRA
 
@@ -77,11 +77,11 @@
 
 生成为四个象限的4宫格相同图片比例的分镜表，同一人物，在连贯空间中，不同角度，四个象限有大全景描述大世界的镜头、全景包含全身人物的镜头、中景镜头、特写镜头叙述连贯的故事
 
-![Krea 2 四象限分镜生成结果](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/Krea2_identity_moodboard_verified_21x9_00564_.png)
+![Krea 2 四象限分镜生成结果](assets/readme/showcase/Krea2_identity_moodboard_verified_21x9_00564_.png)
 
 ### 室内电影感插画 · 多情绪板样式测试 · M87 LoRA、realism\_engine\_krea2\_v3.1 Lora
 
-![室内电影感插画生成结果](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/ComfyUI_00161_.png)
+![室内电影感插画生成结果](assets/readme/showcase/ComfyUI_00161_.png)
 
 </details>
 

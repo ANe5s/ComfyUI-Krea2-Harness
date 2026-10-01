@@ -53,7 +53,7 @@ I could explain and formally define what Evolution means here. Put plainly, any 
 
 | M87 LoRA 0.8 | M87 LoRA 1.0 |
 | --- | --- |
-| ![M87 LoRA 0.8 generated result](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/Krea2_identity_moodboard_verified_21x9_00526_.png) | ![M87 LoRA 1.0 generated result](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/Krea2_identity_moodboard_verified_21x9_00524_.png) |
+| ![M87 LoRA 0.8 generated result](assets/readme/showcase/Krea2_identity_moodboard_verified_21x9_00526_.png) | ![M87 LoRA 1.0 generated result](assets/readme/showcase/Krea2_identity_moodboard_verified_21x9_00524_.png) |
 
 ### White-Robed Xianxia Swordswoman · M87 LoRA, realism\_engine\_krea2\_v3.1 LoRA
 
@@ -61,13 +61,13 @@ I could explain and formally define what Evolution means here. Put plainly, any 
 
 | Generated Result 1 | Generated Result 2 |
 | --- | --- |
-| ![White-robed swordswoman, result 1](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/ComfyUI_00215_.png) | ![White-robed swordswoman, result 2](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/ComfyUI_00224_.png) |
+| ![White-robed swordswoman, result 1](assets/readme/showcase/ComfyUI_00215_.png) | ![White-robed swordswoman, result 2](assets/readme/showcase/ComfyUI_00224_.png) |
 
 ### Cyberpunk Motorcycle Chase · M87 LoRA, realism\_engine\_krea2\_v3.1 LoRA
 
 **Prompt:** An Asian woman rides a motorcycle through a cyberpunk city. As she overtakes a car on her left, she looks back and laughs; a vehicle explodes in the distance. Painterly comic-book style, intricate brushwork, fisheye ultra-wide angle. (Dynamic Ink Fantasy moodboard selected.)
 
-![Cyberpunk motorcycle chase generated result](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/ComfyUI_00232_.png)
+![Cyberpunk motorcycle chase generated result](assets/readme/showcase/ComfyUI_00232_.png)
 
 ### Four-Panel Storyboard · M87 LoRA
 
@@ -75,11 +75,11 @@ I could explain and formally define what Evolution means here. Put plainly, any 
 
 Generate a four-panel storyboard grid with the same aspect ratio in all panels. Show the same person in a continuous space from different angles. The four quadrants tell a continuous story through an establishing long shot of the world, a full-body shot, a medium shot, and a close-up.
 
-![Krea 2 four-panel storyboard generated result](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/Krea2_identity_moodboard_verified_21x9_00564_.png)
+![Krea 2 four-panel storyboard generated result](assets/readme/showcase/Krea2_identity_moodboard_verified_21x9_00564_.png)
 
 ### Cinematic Interior Illustration · Moodboard Style Tests · M87 LoRA, realism\_engine\_krea2\_v3.1 LoRA
 
-![Cinematic interior illustration generated result](https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/refs/heads/main/Picture/ComfyUI_00161_.png)
+![Cinematic interior illustration generated result](assets/readme/showcase/ComfyUI_00161_.png)
 
 </details>
 
