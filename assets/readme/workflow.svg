@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 1050" role="img" aria-labelledby="title desc" overflow="hidden">
+  <title id="title">ComfyUI-Krea2-Harness optional prompt pipeline</title>
+  <desc id="desc">Two text-generation phases build and clean prompts before an external Krea 2 image workflow. Moodboard inputs and fallbacks are shown separately. Resolution selection is an independent branch.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05070b"/>
+      <stop offset="0.55" stop-color="#080e18"/>
+      <stop offset="1" stop-color="#0b1421"/>
+    </linearGradient>
+    <linearGradient id="cobalt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#123d7a"/>
+      <stop offset="0.55" stop-color="#174f9d"/>
+      <stop offset="1" stop-color="#102e5b"/>
+    </linearGradient>
+    <linearGradient id="external" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#101c2b"/>
+      <stop offset="1" stop-color="#14263b"/>
+    </linearGradient>
+    <linearGradient id="flow-ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#185bbd"/>
+      <stop offset="0.38" stop-color="#8cc8ff"/>
+      <stop offset="0.62" stop-color="#f4f8ff"/>
+      <stop offset="0.78" stop-color="#e85b6a"/>
+      <stop offset="1" stop-color="#1457b8"/>
+    </linearGradient>
+    <clipPath id="canvas-clip"><rect width="1300" height="1050" rx="28"/></clipPath>
+    <marker id="arrow-silver" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 10 5 0 10Z" fill="#bccde1"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 10 5 0 10Z" fill="#ec6471"/>
+    </marker>
+    <style>
+      text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif}
+      .panel{fill:#090f19;stroke:#526783;stroke-opacity:.42;stroke-width:1.4}
+      .local{fill:url(#cobalt);stroke:#75adff;stroke-opacity:.92;stroke-width:1.6;filter:url(#blue-glow)}
+      .outside{fill:url(#external);stroke:#c7d9ef;stroke-opacity:.6;stroke-width:1.4}
+      .callout{fill:#0c1725;stroke:#7188a6;stroke-opacity:.46;stroke-width:1.2}
+      .primary{fill:#f3f7fd;font-size:21px;font-weight:650}
+      .secondary{fill:#c7d5e7;font-size:16px}
+      .muted{fill:#91a4bc;font-size:15px}
+      .section{fill:#f0f5fb;font-size:21px;font-weight:650}
+      .kicker{fill:#8fbaff;font-size:14px;font-weight:700;letter-spacing:2.1px}
+      .arrow{fill:none;stroke:#dceaff;stroke-width:3.4}
+    .arrowhead{fill:#dceaff;stroke:#dceaff;stroke-width:1;stroke-linejoin:round}
+    </style>
+    <filter id="ribbon-glow" x="-30%" y="-80%" width="160%" height="260%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="soft"/>
+      <feFlood flood-color="#3286ff" flood-opacity=".42" result="haloColor"/>
+      <feComposite in="haloColor" in2="soft" operator="in" result="halo"/>
+      <feMerge><feMergeNode in="halo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="blue-glow" x="-30%" y="-50%" width="160%" height="200%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#4e9cff" flood-opacity=".28" result="glowColor"/>
+      <feComposite in="glowColor" in2="blur" operator="in" result="glow"/>
+      <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="silver-glow" x="-80%" y="-300%" width="260%" height="700%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1300" height="1050" rx="28" fill="url(#background)"/>
+  <g fill="#c9dcf5">
+    <circle cx="34" cy="146" r="1.6" opacity=".44"/><circle cx="1268" cy="157" r="1.4" opacity=".5"/>
+    <circle cx="19" cy="331" r="1.2" opacity=".4"/><circle cx="1281" cy="371" r="1.8" opacity=".42"/>
+    <circle cx="20" cy="585" r="1.6" opacity=".4"/><circle cx="1280" cy="634" r="1.2" opacity=".48"/>
+    <circle cx="25" cy="779" r="1.3" opacity=".46"/><circle cx="1275" cy="814" r="1.5" opacity=".42"/>
+    <circle cx="27" cy="1008" r="1.4" opacity=".48"/><circle cx="1280" cy="1018" r="1.8" opacity=".4"/>
+  </g>
+  <rect x="1" y="1" width="1298" height="1048" rx="27" fill="none" stroke="#8da1bb" stroke-opacity=".24"/>
+  <g clip-path="url(#canvas-clip)">
+  <path d="M-100 99C90-18 247 195 420 96S742 28 915 111s266 64 475-39" fill="none" stroke="url(#flow-ribbon)" stroke-width="138" stroke-linecap="round" opacity=".27" filter="url(#ribbon-glow)"/>
+  <path d="M-92 110C92 12 245 208 424 110S746 43 921 126s265 67 470-35" fill="none" stroke="url(#cobalt)" stroke-width="56" stroke-linecap="round" opacity=".34"/>
+  <path d="M-70 116C126 1 245 217 436 119S741 57 925 132s264 60 465-39" fill="none" stroke="#e6f1ff" stroke-width="3" opacity=".50" filter="url(#silver-glow)"/>
+  <path d="M-62 137C130 39 254 229 442 139S746 75 932 154s260 66 450-34" fill="none" stroke="#d94c5d" stroke-width="10" stroke-linecap="round" opacity=".22"/>
+  </g>
+
+  <text x="54" y="51" class="kicker">COMFYUI  /  OPTIONAL HARNESS PATH</text>
+  <text x="52" y="99" fill="#f8fbff" font-size="34" font-weight="720">提示词编译与清理</text>
+  <text x="54" y="132" fill="#a9bad0" font-size="18">两轮文本生成连接到外部 Krea 2 图像工作流；本插件本身不执行图像采样。</text>
+  <rect x="1040" y="49" width="204" height="38" rx="19" fill="#10213a" stroke="#6fa6fa" stroke-opacity=".6"/>
+  <circle cx="1061" cy="68" r="5" fill="#68a4ff"/>
+  <text x="1075" y="74" fill="#d9e9ff" font-size="15" font-weight="600">插件节点</text>
+  <circle cx="1162" cy="68" r="5" fill="#d0dced"/>
+  <text x="1176" y="74" fill="#d9e9ff" font-size="15" font-weight="600">外部</text>
+
+  <rect x="38" y="160" width="1224" height="252" rx="22" class="panel"/>
+  <text x="62" y="197" fill="#75adff" font-size="15" font-weight="700" letter-spacing="1.5">01  /  第一阶段</text>
+  <text x="230" y="197" class="section">主提示词构建与清理</text>
+  <text x="1030" y="197" class="muted">第一阶段系统提示词</text>
+
+  <rect x="60" y="235" width="165" height="86" rx="14" class="outside"/>
+  <text x="76" y="269" class="primary" style="font-size:18px">MAIN PROMPT</text>
+  <text x="79" y="295" class="secondary">用户输入</text>
+  <path d="M228 278H245" class="arrow"/><path d="M245 273L255 278L245 283Z" class="arrowhead"/>
+
+  <rect x="266" y="235" width="190" height="86" rx="14" class="local"/>
+  <text x="286" y="269" class="primary">Krea2提示词</text>
+  <text x="286" y="295" class="secondary">第一阶段提示词输入</text>
+  <path d="M459 278H475" class="arrow"/><path d="M475 273L485 278L475 283Z" class="arrowhead"/>
+
+  <rect x="496" y="235" width="180" height="86" rx="14" class="outside"/>
+  <text x="516" y="269" class="primary">TextGenerate</text>
+  <text x="516" y="295" class="secondary">ComfyUI 核心节点</text>
+  <path d="M679 278H695" class="arrow"/><path d="M695 273L705 278L695 283Z" class="arrowhead"/>
+
+  <rect x="716" y="235" width="222" height="86" rx="14" class="local"/>
+  <text x="736" y="269" class="primary" style="font-size:18px">Krea2提示词 Harness</text>
+  <text x="736" y="295" class="secondary">第一阶段清理与回退</text>
+  <path d="M941 278H957" class="arrow"/><path d="M957 273L967 278L957 283Z" class="arrowhead"/>
+
+  <rect x="978" y="235" width="244" height="86" rx="14" class="outside"/>
+  <text x="998" y="269" class="primary">第一阶段清理结果</text>
+  <text x="998" y="295" class="secondary">继续送往第二阶段</text>
+
+  <rect x="60" y="346" width="540" height="43" rx="12" class="callout"/>
+  <text x="78" y="373" class="secondary">原始主提示词供两个阶段追溯与回退。</text>
+  <rect x="618" y="346" width="604" height="43" rx="12" class="callout"/>
+  <path d="M641 367h30" fill="none" stroke="#76adff" stroke-width="2.2" stroke-dasharray="5 5"/>
+  <text x="684" y="373" class="secondary">第一阶段清理结果 → 编译输入 + 第二阶段回退。</text>
+
+  <rect x="38" y="430" width="1224" height="316" rx="22" class="panel"/>
+  <text x="62" y="468" fill="#ee7580" font-size="15" font-weight="700" letter-spacing="1.5">02  /  第二阶段</text>
+  <text x="230" y="468" class="section">情绪板适配、编译与最终清理</text>
+  <text x="1030" y="468" class="muted">第二阶段系统提示词</text>
+
+  <path d="M342 525V503H1070V525" fill="none" stroke="#ec6471" stroke-width="2.2" stroke-dasharray="6 6" marker-end="url(#arrow-red)"/>
+  <rect x="638" y="484" width="159" height="30" rx="15" fill="#28131b" stroke="#ec6471" stroke-opacity=".55"/>
+  <text x="654" y="505" fill="#ffc3c9" font-size="14">Style-only Positive</text>
+
+  <rect x="58" y="528" width="164" height="91" rx="14" class="outside"/>
+  <text x="76" y="561" class="primary">Moodboard</text>
+  <text x="76" y="585" class="primary">Browser</text>
+  <text x="76" y="607" class="muted">外部扩展</text>
+  <path d="M225 573H236" class="arrow"/><path d="M236 568L246 573L236 578Z" class="arrowhead"/>
+
+  <rect x="257" y="528" width="174" height="91" rx="14" class="local"/>
+  <text x="275" y="561" class="primary" style="font-size:16px">Krea2情绪板转换</text>
+  
+  <text x="275" y="607" class="secondary">metadata + style</text>
+  <path d="M434 573H445" class="arrow"/><path d="M445 568L455 573L445 578Z" class="arrowhead"/>
+
+  <rect x="466" y="528" width="202" height="91" rx="14" class="local"/>
+  <text x="485" y="550" class="primary" style="font-size:18px"><tspan x="485" y="550">Krea2提示词</tspan><tspan x="485" y="573">情绪板编译</tspan></text>
+  <text x="485" y="594" class="secondary">来源 + 第一阶段 + 风格</text>
+  <text x="485" y="613" class="muted" style="font-size:13px">内嵌第二阶段系统提示词</text>
+  <path d="M671 573H682" class="arrow"/><path d="M682 568L692 573L682 578Z" class="arrowhead"/>
+
+  <rect x="703" y="528" width="164" height="91" rx="14" class="outside"/>
+  <text x="721" y="561" class="primary">TextGenerate</text>
+  <text x="721" y="587" class="secondary">ComfyUI 核心节点</text>
+  <text x="721" y="608" class="muted">文本生成</text>
+  <path d="M870 573H881" class="arrow"/><path d="M881 568L891 573L881 578Z" class="arrowhead"/>
+
+  <rect x="902" y="528" width="203" height="91" rx="14" class="local"/>
+  <text x="921" y="561" class="primary" style="font-size:16px">Krea2情绪板 Harness</text>
+  <text x="921" y="587" class="secondary">最终清理与回退</text>
+  <text x="921" y="608" class="muted">追加可选风格条件</text>
+  <path d="M1108 573H1119" class="arrow"/><path d="M1119 568L1129 573L1119 578Z" class="arrowhead"/>
+
+  <rect x="1140" y="528" width="102" height="91" rx="14" class="outside"/>
+  <text x="1152" y="555" fill="#f3f7fd" font-size="14" font-weight="650">CLIP Encode</text>
+  <text x="1152" y="582" class="secondary">Krea 2</text>
+  <text x="1152" y="605" class="muted">采样 · 外部</text>
+
+  <rect x="58" y="647" width="374" height="69" rx="12" class="callout"/>
+  <text x="76" y="674" fill="#dce9f9" font-size="15" font-weight="650">来源与回退</text>
+  <text x="76" y="698" class="muted">原始主提示词供两个阶段追溯。</text>
+  <rect x="449" y="647" width="374" height="69" rx="12" class="callout"/>
+  <text x="467" y="674" fill="#dce9f9" font-size="15" font-weight="650">Metadata JSON</text>
+  <text x="467" y="698" class="muted">元数据同时接入编译节点与清理节点。</text>
+  <rect x="840" y="647" width="402" height="69" rx="12" class="callout"/>
+  <text x="858" y="674" fill="#dce9f9" font-size="15" font-weight="650">Negative 条件</text>
+  <text x="858" y="698" class="muted">浏览器 negative 绕过插件，直连下游负向编码。</text>
+
+  <rect x="38" y="766" width="1224" height="220" rx="22" fill="#0b1421" stroke="#91aac8" stroke-opacity=".46" stroke-width="1.4"/>
+  <text x="62" y="804" fill="#dbe8f8" font-size="15" font-weight="700" letter-spacing="1.5">03  /  INDEPENDENT CANVAS BRANCH</text>
+  <text x="62" y="837" class="section">Krea2分辨率选择</text>
+  <text x="62" y="864" class="muted">与两个提示词阶段相互独立</text>
+
+  <rect x="450" y="814" width="230" height="77" rx="14" class="outside"/>
+  <text x="472" y="846" class="primary">宽高比 + 目标 MP</text>
+  <text x="472" y="872" class="secondary">1.0–4.0 · 步长 0.1</text>
+  <path d="M684 852H710" class="arrow"/><path d="M710 847L720 852L710 857Z" class="arrowhead"/>
+  <rect x="731" y="814" width="243" height="77" rx="14" class="local"/>
+  <text x="752" y="846" class="primary">Krea2分辨率选择</text>
+  <text x="752" y="872" class="secondary">官网 1K 尺寸 · 32 px 网格</text>
+  <path d="M978 852H1004" class="arrow"/><path d="M1004 847L1014 852L1004 857Z" class="arrowhead"/>
+  <rect x="1025" y="814" width="207" height="77" rx="14" class="outside"/>
+  <text x="1048" y="846" class="primary">Width × Height</text>
+  <text x="1048" y="872" class="secondary">→ Empty Latent</text>
+
+  <path d="M450 920H1232" fill="none" stroke="#72849b" stroke-opacity=".38"/>
+  <circle cx="467" cy="949" r="4.5" fill="#76adff"/>
+  <text x="480" y="955" class="muted">本插件输出宽、高</text>
+  <circle cx="650" cy="949" r="4.5" fill="#d0dced"/>
+  <text x="663" y="955" class="muted">Empty Latent 与 Krea 2 由外部工作流提供</text>
+  <text x="1030" y="955" fill="#92a8c2" font-size="14">长边上限 2048 px</text>
+</svg>
