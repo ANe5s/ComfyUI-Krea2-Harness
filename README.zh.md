@@ -94,6 +94,13 @@
 
 ### 室内电影感插画 · 多情绪板样式测试 · M87 LoRA、realism\_engine\_krea2\_v3.1 Lora
 
+<details>
+<summary>查看详细提示词</summary>
+
+提示词：一幅电影感、半写实的数字插画，描绘了一位留着凌乱 {argument name="hair color" default="auburn"} 头发并随意挽成发髻的年轻女子，正坐在现代高层公寓的地板上。她身穿一件宽松的 {argument name="clothing item" default="black knit sweater"}，衣领滑落至一侧肩膀，露出里面的细肩带。她神情沉思且略带忧郁，身体前倾，正在调整复古唱机上的唱针。整个场景沐浴在透过落地窗洒入的温暖金色阳光中，在她的头发和皮肤上形成了强烈的逆光和轮廓光效果。背景中，可以看到日落时分模糊的城市天际线。前景细节包括散落的黑胶唱片、一个灰色陶瓷马克杯以及放在木地板上的黑色耳机。整体氛围舒适、怀旧且私密。
+
+</details>
+
 ![室内电影感插画生成结果](assets/readme/showcase/ComfyUI_00161_.png)
 
 </details>

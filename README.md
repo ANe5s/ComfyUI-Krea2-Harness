@@ -92,6 +92,13 @@ Generate a four-panel storyboard grid with the same aspect ratio in all panels. 
 
 ### Cinematic Interior Illustration · Moodboard Style Tests · M87 LoRA, realism\_engine\_krea2\_v3.1 LoRA
 
+<details>
+<summary>View Detailed Prompt</summary>
+
+**Prompt:** A cinematic, semi-realistic digital illustration depicts a young woman with tousled {argument name="hair color" default="auburn"} hair loosely tied in a bun, sitting on the floor of a modern high-rise apartment. She wears a loose-fitting {argument name="clothing item" default="black knit sweater"}, with the neckline slipping off one shoulder to reveal a thin strap underneath. She looks thoughtful and slightly melancholic, leaning forward as she adjusts the stylus on a vintage turntable. The whole scene is bathed in warm golden sunlight streaming through floor-to-ceiling windows, creating strong backlighting and rim light along her hair and skin. In the background, a blurred city skyline is visible at sunset. Foreground details include scattered vinyl records, a gray ceramic mug, and black headphones resting on the wooden floor. The overall mood is cozy, nostalgic, and intimate.
+
+</details>
+
 ![Cinematic interior illustration generated result](assets/readme/showcase/ComfyUI_00161_.png)
 
 </details>
