@@ -46,6 +46,19 @@
 | --- | --- |
 | ![ComfyUI_00251_.png](assets/readme/showcase/ComfyUI_00251_.png) | ![ComfyUI_00260_.png](assets/readme/showcase/ComfyUI_00260_.png) |
 
+### 人物参考图生图 · 仅krea2\_identity\_edit\_v1\_2 Lora
+
+<details>
+<summary>查看详细提示词与编辑词</summary>
+
+**图片提示词：** Exactly one adult woman, Lin Yao; eye-level medium close-up; established character appearance preserved; cold blue-white screen light on her face; one side of face illuminated and the other softly shadowed; clear rectangular screen reflection in both eyes; gaze lifted toward Gu Chuan off-camera; calm analytical questioning expression; slight eyebrow movement; lips beginning to speak; information confirmation rather than emotion; dark control room background softly blurred; eyes and reflections sharply focused; restrained performance.
+
+**编辑词：** Create one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, excluding clothing and pose, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears.（选择Moodboards的Cinematic Urban Nostalgia — Overcast Beige 样式）
+
+</details>
+
+![人物参考图生图生成结果](assets/readme/showcase/ComfyUI_00115.png)
+
 <details>
 <summary>展开查看其他提示词与生成结果</summary>
 
@@ -59,7 +72,7 @@
 
 ### 古风女剑仙 · M87 LoRA、realism\_engine\_krea2\_v3.1 Lora
 
-提示词：一位白衣古风女剑仙舞剑，衣服和头发随风飘动，超低角度仰视。
+提示词：一个性冷淡风格，纯欲面容的18岁貌美古风女剑仙舞剑，一身白衣，衣服头发随风飘动，超低角度仰视（选择Moodboards的Cinematic Chiaroscuro Solitude — Golden Shaft 35mm样式）
 
 | 生成结果 1 | 生成结果 2 |
 | --- | --- |

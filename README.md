@@ -44,6 +44,19 @@ I could explain and formally define what Evolution means here. Put plainly, any 
 | --- | --- |
 | ![ComfyUI_00251_.png](assets/readme/showcase/ComfyUI_00251_.png) | ![ComfyUI_00260_.png](assets/readme/showcase/ComfyUI_00260_.png) |
 
+### Character Reference Image-to-Image · krea2\_identity\_edit\_v1\_2 LoRA Only
+
+<details>
+<summary>View Detailed Prompt and Edit Instruction</summary>
+
+**Image Prompt:** Exactly one adult woman, Lin Yao; eye-level medium close-up; established character appearance preserved; cold blue-white screen light on her face; one side of face illuminated and the other softly shadowed; clear rectangular screen reflection in both eyes; gaze lifted toward Gu Chuan off-camera; calm analytical questioning expression; slight eyebrow movement; lips beginning to speak; information confirmation rather than emotion; dark control room background softly blurred; eyes and reflections sharply focused; restrained performance.
+
+**Edit Instruction:** Create one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, excluding clothing and pose, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. (Select the Cinematic Urban Nostalgia — Overcast Beige style in Moodboards.)
+
+</details>
+
+![Character reference image-to-image result](assets/readme/showcase/ComfyUI_00115.png)
+
 <details>
 <summary>Show more prompts and generated images</summary>
 
@@ -57,7 +70,7 @@ I could explain and formally define what Evolution means here. Put plainly, any 
 
 ### White-Robed Xianxia Swordswoman · M87 LoRA, realism\_engine\_krea2\_v3.1 LoRA
 
-**Prompt:** A white-robed swordswoman in a Chinese fantasy setting performs a sword dance, with her clothes and hair flowing in the wind. Extreme low-angle view.
+**Prompt:** A beautiful 18-year-old sword immortal in ancient Chinese style, with a cool, minimalist aesthetic and an innocent yet sensual face, performs a sword dance. She wears all white, and her clothes and hair flow in the wind. Extreme low-angle upward view. (Cinematic Chiaroscuro Solitude — Golden Shaft 35mm moodboard selected.)
 
 | Generated Result 1 | Generated Result 2 |
 | --- | --- |
@@ -170,7 +183,7 @@ A red bicycle, with a matte finish and visible metal frame details, leans agains
 
 ## Feature Overview
 
-The six localized nodes and their responsibilities are:
+The six localized node names and their responsibilities are:
 
 - **Krea2 Prompt:** Places the raw main prompt in the embedded Stage 1 system-prompt input, and outputs both the merged prompt and the original main prompt.
 - **Krea2 Prompt–Moodboard Compiler:** Combines the raw main prompt, the Stage 1 cleaned prompt, and moodboard metadata into the embedded Stage 2 system-prompt input.
