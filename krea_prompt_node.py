@@ -120,13 +120,16 @@ _ASSISTANT_BOUNDARY = "\n<|im_end|>\n<|im_start|>assistant\n"
 class KreaPrompt:
     """Build the exact Stage 1 V257 role-separated prompt from MAIN PROMPT."""
 
-    CATEGORY = "ANe5s节点/Krea2"
+    CATEGORY = "ANe5s Nodes/Krea2"
     RETURN_TYPES = ("STRING", "STRING")
     RETURN_NAMES = ("Merged Prompt", "Main Prompt")
+    OUTPUT_TOOLTIPS = (
+        "Role-separated Stage 1 V257 prompt sent to the text-generation node.",
+        "Original main prompt passed to source-ledger and fallback roles.",
+    )
     FUNCTION = "build"
     DESCRIPTION = (
-        "Krea Stage 1 V257 prompt compiler. Only MAIN PROMPT is editable; "
-        "the role-separated system prompt and assistant boundary are fixed internally."
+        "Build the fixed Stage 1 V257 role-separated prompt from one editable main prompt."
     )
 
     @classmethod
@@ -138,7 +141,8 @@ class KreaPrompt:
                     {
                         "default": "",
                         "multiline": True,
-                        "tooltip": "MAIN PROMPT：用户可修改的原始主提示词。",
+                        "display_name": "Main Prompt",
+                        "tooltip": "Original main prompt that the user can edit.",
                     },
                 ),
             },

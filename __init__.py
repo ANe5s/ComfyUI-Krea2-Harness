@@ -25,7 +25,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "KreaHarnessPrompt": "Krea2 Prompt Harness",
     "KreaHarnessMoodboard": "Krea2 Moodboard Harness",
     "MoodboardsHarness": "Krea2 Moodboard Adapter",
-    "Krea2TurboResolutionSelector": "Krea2分辨率选择",
+    "Krea2TurboResolutionSelector": "Krea2 Resolution Selector",
 }
 
 WEB_DIRECTORY = "./web"

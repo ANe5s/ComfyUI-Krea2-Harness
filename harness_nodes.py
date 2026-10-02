@@ -16,7 +16,7 @@ import re
 from .krea_harness_local_core import KreaPromptSanitizer
 
 
-HARNESS_CATEGORY = "ANe5s节点/Krea2"
+HARNESS_CATEGORY = "ANe5s Nodes/Krea2"
 HARNESS_NAME = "Krea2 Harness"
 HARNESS_RELEASE = "V0.1Alpha"
 HARNESS_STAGE1 = "V0.1.257"
@@ -155,7 +155,7 @@ def _parse_style_only_sections(value: str) -> tuple[str, list[tuple[str, str, st
         key = " ".join(match.group("label").split()).casefold()
         label = _STYLE_ONLY_CANONICAL_LABELS.get(key)
         body = re.sub(r"\s+", " ", match.group("body")).strip()
-        body = body.rstrip(".!?。！？").rstrip()
+        body = body.rstrip(".!?\u3002\uff01\uff1f").rstrip()
         if body.startswith("(") and body.endswith(")"):
             body = body[1:-1].strip()
         if label and body:
@@ -211,10 +211,10 @@ class KreaHarnessPrompt:
     CATEGORY = HARNESS_CATEGORY
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("Clean Prompt",)
+    OUTPUT_TOOLTIPS = ("Sanitized Stage 1 prompt.",)
     FUNCTION = "clean"
     DESCRIPTION = (
-        "Stage 1 V257 Prompt Sanitizer. Focus guard and conditional profile-eye guard are fixed OFF; "
-        "other production-safe source/entity protections remain fixed to Krea2 Harness V0.1Alpha."
+        "Clean the Stage 1 V257 generated prompt with focus and profile guards fixed off."
     )
 
     @classmethod
@@ -225,6 +225,7 @@ class KreaHarnessPrompt:
                     "STRING",
                     {
                         "forceInput": True,
+                        "display_name": "Prompt",
                         "tooltip": "Stage 1 V257 generated prompt.",
                     },
                 ),
@@ -232,7 +233,8 @@ class KreaHarnessPrompt:
                     "STRING",
                     {
                         "forceInput": True,
-                        "tooltip": "Original main prompt used for both the fallback and source ledger roles.",
+                        "display_name": "Original Main Prompt",
+                        "tooltip": "Original main prompt used for both fallback and source-ledger roles.",
                     },
                 ),
             },
@@ -273,16 +275,10 @@ class KreaHarnessMoodboard:
     CATEGORY = HARNESS_CATEGORY
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("Clean Prompt",)
+    OUTPUT_TOOLTIPS = ("Sanitized final Stage 2 prompt.",)
     FUNCTION = "clean"
     DESCRIPTION = (
-        "Final Prompt Sanitizer for V124-RB. Source-background focus guard and conditional profile-eye guard are fixed ON; "
-        "rectangular eye catchlight block remains OFF. An optional style-only moodboard positive is appended with the "
-        "same two-newline separator previously provided by the external composition-safe concatenation node; "
-        "original_main_prompt replaces the legacy source_prompt input; metadata_json replaces the legacy style_profile "
-        "input and is passed through unchanged for output compatibility; "
-        "prompt and fallback_prompt are connection-only inputs; subject_side_authority is internal and not public; "
-        "Lighting, Atmosphere, Era or movement, and Contrast sections use the parenthesized "
-        "Label: (description). format; other style sections retain their plain description format."
+        "Clean the final Stage 2 V124-RB prompt and optionally append the style-only moodboard positive."
     )
 
     @classmethod
@@ -293,6 +289,7 @@ class KreaHarnessMoodboard:
                     "STRING",
                     {
                         "forceInput": True,
+                        "display_name": "Prompt",
                         "tooltip": "Stage 2 V124-RB generated prompt.",
                     },
                 ),
@@ -302,6 +299,7 @@ class KreaHarnessMoodboard:
                     "STRING",
                     {
                         "forceInput": True,
+                        "display_name": "Fallback Prompt",
                         "tooltip": "Fallback prompt used when Stage 2 returns a protocol or refusal transcript.",
                     },
                 ),
@@ -311,7 +309,8 @@ class KreaHarnessMoodboard:
                         "default": "",
                         "multiline": True,
                         "forceInput": True,
-                        "tooltip": "Original MAIN PROMPT used by the focus and profile guards.",
+                        "display_name": "Original Main Prompt",
+                        "tooltip": "Original main prompt used by the focus and profile guards.",
                     },
                 ),
                 "metadata_json": (
@@ -320,7 +319,8 @@ class KreaHarnessMoodboard:
                         "default": "",
                         "multiline": True,
                         "forceInput": True,
-                        "tooltip": "Moodboard metadata JSON passed through with the legacy style_profile semantics.",
+                        "display_name": "Metadata JSON",
+                        "tooltip": "Moodboard metadata passed through with the legacy style-profile semantics.",
                     },
                 ),
                 "style_only_positive": (
@@ -329,6 +329,7 @@ class KreaHarnessMoodboard:
                         "default": "",
                         "multiline": True,
                         "forceInput": True,
+                        "display_name": "Style-only Positive",
                         "tooltip": "Optional style-only moodboard positive appended after final prompt sanitization.",
                     },
                 ),

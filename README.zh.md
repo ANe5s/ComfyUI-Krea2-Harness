@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.0a1-315ea8.svg" alt="版本 0.1.0a1"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.0-315ea8.svg" alt="版本 0.1.0"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-%E2%89%A53.10-3776AB.svg" alt="Python 3.10 或更高版本"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/ComfyUI-%E2%89%A50.3.0-315ea8.svg" alt="ComfyUI 0.3.0 或更高版本"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPL--3.0--or--later-b54856.svg" alt="GPL-3.0-or-later 许可证"></a>
@@ -29,7 +29,7 @@
 
 [生图效果展示](#生图效果展示) · [情绪版测试](#情绪版测试) · [插件处理结构](#插件处理结构) · [工作流结构示意](#工作流结构示意) · [快速开始](#快速开始) · [节点参考](#节点参考) · [示例工作流](#示例工作流)
 
-- **当前版本：** 0.1.0a1（V0.1 Alpha）
+- **当前版本：** 0.1.0
 - **节点类别：** 节点 → ANe5s节点 → Krea2
 - **运行时依赖：** 无额外 Python 依赖
 - **情绪板浏览器：** 示例工作流需要另行安装 [ComfyUI-Krea-Moodboards](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
@@ -202,7 +202,7 @@ A red bicycle, with a matte finish and visible metal frame details, leans agains
 - **Krea2情绪板转换：** 将外部 Krea Moodboard Visual Browser 的字符串输出整理为兼容元数据 JSON 和仅风格正面条件。
 - **Krea2分辨率选择：** 按宽高比和目标百万像素返回宽、高；该节点属于独立分辨率支路。
 
-六个节点的中文名称、端口标签、说明和提示均由本地化文件提供。
+六个节点的英文名称、端口标签、说明和提示定义在节点源码中；中文界面文本由中文本地化文件覆盖。
 
 ## 插件处理结构
 
@@ -343,14 +343,12 @@ Krea2提示词情绪板编译另有内部的 `KreaMoodboardStyleAdapter`：它�
 
 ## 本地化与内部类型
 
-本地化文件位于：
+中文本地化文件位于：
 
-- `locales/en/main.json`
-- `locales/en/nodeDefs.json`
 - `locales/zh/main.json`
 - `locales/zh/nodeDefs.json`
 
-本地化只更改界面文字；内部节点类型、输入键和输出键保持稳定。
+英文界面文本定义在节点源码中，并作为默认文本。本地化只更改界面文字；内部节点类型、输入键和输出键保持稳定。
 
 ## 项目范围与许可证
 

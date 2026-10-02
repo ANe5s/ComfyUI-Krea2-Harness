@@ -922,7 +922,7 @@
           "link": 465
         },
         {
-          "label": "分隔符",
+          "label": "Separator",
           "name": "delimiter",
           "type": "STRING",
           "widget": {
@@ -1536,10 +1536,10 @@
       "title": "Model and Usage Guide",
       "properties": {},
       "widgets_values": [
-        "# Krea 2 Turbo Text-to-Image\n\n## How to use\n\n1. Edit「Krea2 Prompt」.\n2. Choose a moodboard in「Krea Moodboard Visual Browser」.\n3. Set the aspect ratio and target megapixels in「Krea2 Resolution Selector」.\n4. Use the LoRA Switch to enable or bypass the workflow's LoRA branch. You can reselect model files to match your local installation.\n5. Queue the workflow.\n\n## Before running\n\n- Diffusion model: a Krea 2 Turbo checkpoint in ComfyUI/models/diffusion_models/.\n- Text encoder: ComfyUI/models/text_encoders/qwen3vl_4b_bf16.safetensors.\n- VAE: ComfyUI/models/vae/qwen_image_vae.safetensors.\n- LoRAs referenced by the workflow are stored in ComfyUI/models/loras/.\n- Install ComfyUI-Krea2-Harness and a moodboard node package that provides Krea Moodboard Visual Browser.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
+        "# Krea 2 Turbo Text-to-Image\n\n## How to use\n\n1. Edit \"Krea2 Prompt\".\n2. Choose a moodboard in \"Krea Moodboard Visual Browser\".\n3. Set the aspect ratio and target megapixels in \"Krea2 Resolution Selector\".\n4. Use the LoRA Switch to enable or bypass the workflow's LoRA branch. You can reselect model files to match your local installation.\n5. Queue the workflow.\n\n## Before running\n\n- Diffusion model: a Krea 2 Turbo checkpoint in ComfyUI/models/diffusion_models/.\n- Text encoder: ComfyUI/models/text_encoders/qwen3vl_4b_bf16.safetensors.\n- VAE: ComfyUI/models/vae/qwen_image_vae.safetensors.\n- LoRAs referenced by the workflow are stored in ComfyUI/models/loras/.\n- Install ComfyUI-Krea2-Harness and a moodboard node package that provides Krea Moodboard Visual Browser.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
       ],
       "widgets_values_named": {
-        "text": "# Krea 2 Turbo Text-to-Image\n\n## How to use\n\n1. Edit「Krea2 Prompt」.\n2. Choose a moodboard in「Krea Moodboard Visual Browser」.\n3. Set the aspect ratio and target megapixels in「Krea2 Resolution Selector」.\n4. Use the LoRA Switch to enable or bypass the workflow's LoRA branch. You can reselect model files to match your local installation.\n5. Queue the workflow.\n\n## Before running\n\n- Diffusion model: a Krea 2 Turbo checkpoint in ComfyUI/models/diffusion_models/.\n- Text encoder: ComfyUI/models/text_encoders/qwen3vl_4b_bf16.safetensors.\n- VAE: ComfyUI/models/vae/qwen_image_vae.safetensors.\n- LoRAs referenced by the workflow are stored in ComfyUI/models/loras/.\n- Install ComfyUI-Krea2-Harness and a moodboard node package that provides Krea Moodboard Visual Browser.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
+        "text": "# Krea 2 Turbo Text-to-Image\n\n## How to use\n\n1. Edit \"Krea2 Prompt\".\n2. Choose a moodboard in \"Krea Moodboard Visual Browser\".\n3. Set the aspect ratio and target megapixels in \"Krea2 Resolution Selector\".\n4. Use the LoRA Switch to enable or bypass the workflow's LoRA branch. You can reselect model files to match your local installation.\n5. Queue the workflow.\n\n## Before running\n\n- Diffusion model: a Krea 2 Turbo checkpoint in ComfyUI/models/diffusion_models/.\n- Text encoder: ComfyUI/models/text_encoders/qwen3vl_4b_bf16.safetensors.\n- VAE: ComfyUI/models/vae/qwen_image_vae.safetensors.\n- LoRAs referenced by the workflow are stored in ComfyUI/models/loras/.\n- Install ComfyUI-Krea2-Harness and a moodboard node package that provides Krea Moodboard Visual Browser.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
       },
       "color": "#222",
       "bgcolor": "#000"
@@ -1963,7 +1963,7 @@
   ],
   "config": {},
   "extra": {
-    "info": "Verified hybrid workflow: Krea2 Moodboard Stage 1/2 text enhancement + Krea2 Identity Edit with scene A and person B.",
+    "info": "Verified text-to-image workflow with two-stage prompt enhancement and moodboard styling for the Krea 2 generation pipeline.",
     "frontendVersion": "1.52.7",
     "production": {
       "stage1": "V257",
@@ -2019,12 +2019,12 @@
       "stage1": "V0.1.257",
       "stage2": "V0.1.124",
       "stage2_implementation": "V124-RB",
-      "prompt_node": "Krea harness提示词",
-      "moodboard_node": "Krea harness情绪板",
-      "node_category": "ANe5s节点/Krea2",
+      "prompt_node": "Krea2 Prompt Harness",
+      "moodboard_node": "Krea2 Moodboard Harness",
+      "node_category": "ANe5s Nodes/Krea2",
       "moodboard_nodes_source": "comfyui-krea-moodboards (preserved in place)"
     },
-    "display_name": "Krea-Harness",
+    "display_name": "Krea2 Harness - Text-to-Image",
     "plugin": "Krea-Harness",
     "verified": {
       "date": "2026-09-10",

@@ -1292,21 +1292,21 @@
           "link": 435
         },
         {
-          "label": "图像",
+          "label": "Image",
           "name": "image",
           "shape": 7,
           "type": "IMAGE",
           "link": 423
         },
         {
-          "label": "图像_B",
+          "label": "Image_B",
           "name": "image_b",
           "shape": 7,
           "type": "IMAGE",
           "link": 424
         },
         {
-          "label": "提示词",
+          "label": "Prompt",
           "name": "prompt",
           "type": "STRING",
           "widget": {
@@ -1315,7 +1315,7 @@
           "link": 437
         },
         {
-          "label": "锚定像素",
+          "label": "Anchor Pixels",
           "name": "grounding_px",
           "shape": 7,
           "type": "INT",
@@ -1325,7 +1325,7 @@
           "link": null
         },
         {
-          "label": "系统提示词",
+          "label": "System Prompt",
           "name": "system_prompt",
           "shape": 7,
           "type": "STRING",
@@ -1374,26 +1374,26 @@
       "mode": 0,
       "inputs": [
         {
-          "label": "模型",
+          "label": "Model",
           "name": "model",
           "type": "MODEL",
           "link": 444
         },
         {
-          "label": "源潜空间",
+          "label": "Source Latent",
           "name": "source_latent",
           "type": "LATENT",
           "link": 425
         },
         {
-          "label": "源潜空间_B",
+          "label": "Source Latent_B",
           "name": "source_latent_b",
           "shape": 7,
           "type": "LATENT",
           "link": 426
         },
         {
-          "label": "参考增强遮罩",
+          "label": "Reference Enhance Mask",
           "name": "ref_boost_mask",
           "shape": 7,
           "type": "MASK",
@@ -1407,21 +1407,21 @@
           "link": 450
         },
         {
-          "label": "源图像",
+          "label": "Source Image",
           "name": "source_image",
           "shape": 7,
           "type": "IMAGE",
           "link": 427
         },
         {
-          "label": "源图像_B",
+          "label": "Source Image_B",
           "name": "source_image_b",
           "shape": 7,
           "type": "IMAGE",
           "link": 428
         },
         {
-          "label": "参考增强",
+          "label": "Reference Enhance",
           "name": "ref_boost",
           "shape": 7,
           "type": "FLOAT",
@@ -1431,7 +1431,7 @@
           "link": null
         },
         {
-          "label": "参考增强_A",
+          "label": "Reference Enhance_A",
           "name": "ref_boost_a",
           "shape": 7,
           "type": "FLOAT",
@@ -1441,7 +1441,7 @@
           "link": null
         },
         {
-          "label": "适配模式",
+          "label": "Fit Mode",
           "name": "fit_mode",
           "shape": 7,
           "type": "COMBO",
@@ -1591,21 +1591,21 @@
           "link": 434
         },
         {
-          "label": "图像",
+          "label": "Image",
           "name": "image",
           "shape": 7,
           "type": "IMAGE",
           "link": 430
         },
         {
-          "label": "图像_B",
+          "label": "Image_B",
           "name": "image_b",
           "shape": 7,
           "type": "IMAGE",
           "link": 431
         },
         {
-          "label": "提示词",
+          "label": "Prompt",
           "name": "prompt",
           "type": "STRING",
           "widget": {
@@ -1614,7 +1614,7 @@
           "link": 436
         },
         {
-          "label": "锚定像素",
+          "label": "Anchor Pixels",
           "name": "grounding_px",
           "shape": 7,
           "type": "INT",
@@ -1624,7 +1624,7 @@
           "link": null
         },
         {
-          "label": "系统提示词",
+          "label": "System Prompt",
           "name": "system_prompt",
           "shape": 7,
           "type": "STRING",
@@ -1691,7 +1691,7 @@
           "link": 442
         },
         {
-          "label": "分隔符",
+          "label": "Separator",
           "name": "delimiter",
           "type": "STRING",
           "widget": {
@@ -1789,10 +1789,10 @@
       "title": "Edit Prompt Reference",
       "properties": {},
       "widgets_values": [
-        "## Preserve clothing and pose\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n*******************\n\n## Preserve identity only\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, excluding clothing and pose, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n\n*******************\n\n## 2×2 storyboard example\n（Include some natural language editing prompts within the main prompt to provide guidance！）\n\nRender exactly one 2x2 storyboard grid with four equal panels; use the reference only for the woman's identity; show the same woman in all four panels, with no other people; follow the scene description for everything else. "
+        "## Preserve clothing and pose\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n*******************\n\n## Preserve identity only\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, excluding clothing and pose, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n\n*******************\n\n## 2×2 storyboard example\n(Include some natural language editing prompts within the main prompt to provide guidance!)\n\nRender exactly one 2x2 storyboard grid with four equal panels; use the reference only for the woman's identity; show the same woman in all four panels, with no other people; follow the scene description for everything else. "
       ],
       "widgets_values_named": {
-        "text": "## Preserve clothing and pose\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n*******************\n\n## Preserve identity only\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, excluding clothing and pose, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n\n*******************\n\n## 2×2 storyboard example\n（Include some natural language editing prompts within the main prompt to provide guidance！）\n\nRender exactly one 2x2 storyboard grid with four equal panels; use the reference only for the woman's identity; show the same woman in all four panels, with no other people; follow the scene description for everything else. "
+        "text": "## Preserve clothing and pose\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n*******************\n\n## Preserve identity only\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, excluding clothing and pose, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n\n*******************\n\n## 2×2 storyboard example\n(Include some natural language editing prompts within the main prompt to provide guidance!)\n\nRender exactly one 2x2 storyboard grid with four equal panels; use the reference only for the woman's identity; show the same woman in all four panels, with no other people; follow the scene description for everything else. "
       },
       "color": "#222",
       "bgcolor": "#000"
@@ -1862,7 +1862,7 @@
           ]
         }
       ],
-      "title": "风格LoRA",
+      "title": "Style LoRA",
       "properties": {
         "Node name for S&R": "LoraLoaderModelOnly",
         "cnr_id": "comfy-core",
@@ -1893,7 +1893,7 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "title": "模型与插件链接",
+      "title": "Model and Plugin Links",
       "properties": {},
       "widgets_values": [
         "Guide: [Subgraph](https://docs.comfy.org/interface/features/subgraph)\n\n## Model Links\n\nFor BF16 and NVFP4 variants, see [Comfy-Org/Krea-2](https://huggingface.co/Comfy-Org/Krea-2)\n\n**diffusion_models**\n\n- [krea2_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/diffusion_models/krea2_turbo_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_4b_bf16.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_bf16.safetensors)\n- [qwen3vl_4b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors)\n\n**loras**\n\n- [m87_lora_v1.safetensors](https://huggingface.co/mgwr/M87/blob/main/m87_lora_v1.safetensors)\n- [realism_engine_krea2_v3.1.safetensors](https://huggingface.co/uzumix/Realism_Engine_Ideogram_4_Krea_2_v3.1/blob/main/realism_engine_krea2_v3.1.safetensors)\n- [youhuabanben_c1-st10000.safetensors](https://www.modelscope.cn/models/xptianshi/youhuabanben)\n- [krea2_identity_edit_v1_2.safetensors](https://huggingface.co/conradlocke/krea2-identity-edit/blob/main/krea2_identity_edit_v1_2.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 diffusion_models/\n│   │   └── krea2_turbo_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_4b_bf16.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 loras/\n│       └── m87_lora_v1.safetensors\n│       └── realism_engine_krea2_v3.1.safetensors\n│       └── youhuabanben_c1-st10000.safetensors\n│       └── krea2_identity_edit_v1_2.safetensors\n            \n``` \n\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n\n## Plugin Requirements\n- Krea Moodboards https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards\n- Krea2 Harness https://github.com/ANe5s/ComfyUI-Krea2-Harness\n- Krea2 Edit https://github.com/lbouaraba/comfyui-krea2edit"
@@ -1930,7 +1930,7 @@
           "link": 463
         },
         {
-          "label": "分隔符",
+          "label": "Separator",
           "name": "delimiter",
           "type": "STRING",
           "widget": {
@@ -1982,10 +1982,10 @@
       "title": "Model and Usage Guide",
       "properties": {},
       "widgets_values": [
-        "# Krea 2 Reference Image Editing\n\n## Single Reference Image\n\n- A: Reference image for the character's identity.\n\n## Dual Reference Image\n\n- A: Scene reference image.\n- B: Character identity reference image.\n\nThe exported workflow records the original local input filenames, but the images are not bundled in the JSON. If ComfyUI reports a missing image, select a scene image and a person reference in the two Load Image nodes before running the workflow.\n\n## How to use\n\n1. Edit「Krea2 Prompt」,If you have complex requirements, please enter custom natural language prompts in the 「Krea2 Prompt」field.\n2. Choose a style moodboard in the「Krea Moodboard Visual Browser」.\n3. Edit「Edit Prompt」.\n4. Set the aspect ratio and target megapixels, then enable or bypass LoRAs as needed.\n5. Confirm that both reference images are loaded, then queue the workflow.\n\nThe 2×2 storyboard example asks for four equal panels that tell one continuous story; results can vary with the model, reference images, and settings.\n\n## Before running\n\n- Krea 2 Turbo diffusion model, Qwen3-VL text encoder, and Qwen Image VAE.\n- The LoRA weights referenced by the workflow, including the identity-edit LoRA.\n- ComfyUI-Krea2-Harness, a moodboard package that provides Krea Moodboard Visual Browser, and an extension that provides Krea2 Edit nodes.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
+        "# Krea 2 Reference Image Editing\n\n## Single Reference Image\n\n- A: Reference image for the character's identity.\n\n## Dual Reference Image\n\n- A: Scene reference image.\n- B: Character identity reference image.\n\nThe exported workflow records the original local input filenames, but the images are not bundled in the JSON. If ComfyUI reports a missing image, select a scene image and a person reference in the two Load Image nodes before running the workflow.\n\n## How to use\n\n1. Edit \"Krea2 Prompt\". If you have complex requirements, please enter custom natural language prompts in the \"Krea2 Prompt\" field.\n2. Choose a style moodboard in the \"Krea Moodboard Visual Browser\".\n3. Edit \"Edit Prompt\".\n4. Set the aspect ratio and target megapixels, then enable or bypass LoRAs as needed.\n5. Confirm that both reference images are loaded, then queue the workflow.\n\nThe 2×2 storyboard example asks for four equal panels that tell one continuous story; results can vary with the model, reference images, and settings.\n\n## Before running\n\n- Krea 2 Turbo diffusion model, Qwen3-VL text encoder, and Qwen Image VAE.\n- The LoRA weights referenced by the workflow, including the identity-edit LoRA.\n- ComfyUI-Krea2-Harness, a moodboard package that provides Krea Moodboard Visual Browser, and an extension that provides Krea2 Edit nodes.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
       ],
       "widgets_values_named": {
-        "text": "# Krea 2 Reference Image Editing\n\n## Single Reference Image\n\n- A: Reference image for the character's identity.\n\n## Dual Reference Image\n\n- A: Scene reference image.\n- B: Character identity reference image.\n\nThe exported workflow records the original local input filenames, but the images are not bundled in the JSON. If ComfyUI reports a missing image, select a scene image and a person reference in the two Load Image nodes before running the workflow.\n\n## How to use\n\n1. Edit「Krea2 Prompt」,If you have complex requirements, please enter custom natural language prompts in the 「Krea2 Prompt」field.\n2. Choose a style moodboard in the「Krea Moodboard Visual Browser」.\n3. Edit「Edit Prompt」.\n4. Set the aspect ratio and target megapixels, then enable or bypass LoRAs as needed.\n5. Confirm that both reference images are loaded, then queue the workflow.\n\nThe 2×2 storyboard example asks for four equal panels that tell one continuous story; results can vary with the model, reference images, and settings.\n\n## Before running\n\n- Krea 2 Turbo diffusion model, Qwen3-VL text encoder, and Qwen Image VAE.\n- The LoRA weights referenced by the workflow, including the identity-edit LoRA.\n- ComfyUI-Krea2-Harness, a moodboard package that provides Krea Moodboard Visual Browser, and an extension that provides Krea2 Edit nodes.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
+        "text": "# Krea 2 Reference Image Editing\n\n## Single Reference Image\n\n- A: Reference image for the character's identity.\n\n## Dual Reference Image\n\n- A: Scene reference image.\n- B: Character identity reference image.\n\nThe exported workflow records the original local input filenames, but the images are not bundled in the JSON. If ComfyUI reports a missing image, select a scene image and a person reference in the two Load Image nodes before running the workflow.\n\n## How to use\n\n1. Edit \"Krea2 Prompt\". If you have complex requirements, please enter custom natural language prompts in the \"Krea2 Prompt\" field.\n2. Choose a style moodboard in the \"Krea Moodboard Visual Browser\".\n3. Edit \"Edit Prompt\".\n4. Set the aspect ratio and target megapixels, then enable or bypass LoRAs as needed.\n5. Confirm that both reference images are loaded, then queue the workflow.\n\nThe 2×2 storyboard example asks for four equal panels that tell one continuous story; results can vary with the model, reference images, and settings.\n\n## Before running\n\n- Krea 2 Turbo diffusion model, Qwen3-VL text encoder, and Qwen Image VAE.\n- The LoRA weights referenced by the workflow, including the identity-edit LoRA.\n- ComfyUI-Krea2-Harness, a moodboard package that provides Krea Moodboard Visual Browser, and an extension that provides Krea2 Edit nodes.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
       },
       "color": "#222",
       "bgcolor": "#000"
@@ -2549,7 +2549,7 @@
       ]
     },
     "frontendVersion": "1.52.7",
-    "info": "Verified hybrid workflow: Krea2 Moodboard Stage 1/2 text enhancement + Krea2 Identity Edit with scene A and person B.",
+    "info": "Verified image-to-image workflow with two-stage prompt enhancement and moodboard styling, followed by Krea 2 identity editing. Reference A provides the scene; Reference B provides the subject identity.",
     "production": {
       "stage1": "V257",
       "stage1_prompt_file": "prompt_enhancement_stage1_v257_v56_theme_aperture_no_biography.txt",
@@ -2597,12 +2597,12 @@
       "stage1": "V0.1.257",
       "stage2": "V0.1.124",
       "stage2_implementation": "V124-RB",
-      "prompt_node": "Krea harness提示词",
-      "moodboard_node": "Krea harness情绪板",
-      "node_category": "ANe5s节点/Krea2",
+      "prompt_node": "Krea2 Prompt Harness",
+      "moodboard_node": "Krea2 Moodboard Harness",
+      "node_category": "ANe5s Nodes/Krea2",
       "moodboard_nodes_source": "comfyui-krea-moodboards (preserved in place)"
     },
-    "display_name": "Krea-Harness",
+    "display_name": "Krea2 Harness - Image-to-Image",
     "plugin": "Krea-Harness",
     "verified": {
       "date": "2026-09-10",

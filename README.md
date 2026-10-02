@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.0a1-315ea8.svg" alt="Version 0.1.0a1"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-0.1.0-315ea8.svg" alt="Version 0.1.0"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-%E2%89%A53.10-3776AB.svg" alt="Python 3.10 or later"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/ComfyUI-%E2%89%A50.3.0-315ea8.svg" alt="ComfyUI 0.3.0 or later"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPL--3.0--or--later-b54856.svg" alt="GPL-3.0-or-later license"></a>
@@ -29,7 +29,7 @@ I could explain and formally define what Evolution means here. Put plainly, any 
 
 [Image Generation Showcase](#image-generation-showcase) · [Moodboard Tests](#moodboard-tests) · [Plugin Processing Structure](#plugin-processing-structure) · [Workflow Structure](#workflow-structure) · [Quick Start](#quick-start) · [Node Reference](#node-reference) · [Example Workflows](#example-workflows)
 
-- **Current version:** 0.1.0a1 (V0.1 Alpha)
+- **Current version:** 0.1.0
 - **Node category:** Nodes → ANe5s Nodes → Krea2
 - **Runtime dependencies:** No additional Python dependencies
 - **Moodboard browser:** Example workflows require [ComfyUI-Krea-Moodboards](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards) to be installed separately
@@ -199,7 +199,7 @@ The six localized node names and their responsibilities are:
 - **Krea2 Moodboard Adapter:** Converts string outputs from the external Krea Moodboard Visual Browser into compatible metadata JSON and a style-only positive condition.
 - **Krea2 Resolution Selector:** Returns width and height from the aspect ratio and target megapixel value; it runs on a separate resolution branch.
 
-The six node names, port labels, descriptions, and tooltips are supplied by the locale files.
+English node names, port labels, descriptions, and tooltips are defined in the node source; the Chinese locale overrides the interface text.
 
 ## Plugin Processing Structure
 
@@ -340,14 +340,12 @@ Check the selected aspect ratio and connect this node’s width and height outpu
 
 ## Localization and Internal Types
 
-Localization files are located at:
+Chinese localization files are located at:
 
-- `locales/en/main.json`
-- `locales/en/nodeDefs.json`
 - `locales/zh/main.json`
 - `locales/zh/nodeDefs.json`
 
-Localization changes only interface text; internal node types, input keys, and output keys remain stable.
+English interface text is defined in the node source and serves as the default. Localization changes only interface text; internal node types, input keys, and output keys remain stable.
 
 ## Project Scope and License
 

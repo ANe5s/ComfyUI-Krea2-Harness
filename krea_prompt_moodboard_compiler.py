@@ -118,14 +118,15 @@ def _text(value: object) -> str:
 class KreaPromptMoodboardCompiler:
     """Compile the exact Stage 2 V124-RB prompt package used by production."""
 
-    CATEGORY = "ANe5s节点/Krea2"
+    CATEGORY = "ANe5s Nodes/Krea2"
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("Merged Prompt",)
+    OUTPUT_TOOLTIPS = (
+        "Complete Stage 2 V124-RB prompt sent to the text-generation node.",
+    )
     FUNCTION = "compile"
     DESCRIPTION = (
-        "Krea Stage 2 moodboard compiler. Combines the original source ledger, "
-        "Stage 1 prompt, moodboard style profile, and hidden V124-RB system "
-        "prompt without exposing the system prompt as an input."
+        "Compile the fixed Stage 2 V124-RB system prompt with the original prompt, cleaned prompt, and moodboard metadata."
     )
 
     @classmethod
@@ -137,7 +138,8 @@ class KreaPromptMoodboardCompiler:
                     {
                         "default": "{}",
                         "forceInput": True,
-                        "tooltip": "Krea Moodboard metadata JSON; converted internally to style channels.",
+                        "display_name": "Metadata JSON",
+                        "tooltip": "Krea moodboard metadata JSON used to construct the style channels.",
                     },
                 ),
                 "main_prompt": (
@@ -145,7 +147,8 @@ class KreaPromptMoodboardCompiler:
                     {
                         "default": "",
                         "forceInput": True,
-                        "tooltip": "Original MAIN PROMPT; retained as the source ledger.",
+                        "display_name": "Main Prompt",
+                        "tooltip": "Original main prompt retained as the source ledger.",
                     },
                 ),
                 "clean_prompt": (
@@ -153,6 +156,7 @@ class KreaPromptMoodboardCompiler:
                     {
                         "default": "",
                         "forceInput": True,
+                        "display_name": "Clean Prompt",
                         "tooltip": "Stage 1 cleaned prompt used as the enhanced source.",
                     },
                 ),

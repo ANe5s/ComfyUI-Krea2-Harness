@@ -118,15 +118,16 @@ def get_krea2_turbo_resolution(
 class Krea2TurboResolutionSelector:
     """Select an MP-adjustable Krea 2 Turbo resolution."""
 
-    CATEGORY = "ANe5s节点/Krea2"
+    CATEGORY = "ANe5s Nodes/Krea2"
     RETURN_TYPES = ("INT", "INT")
     RETURN_NAMES = ("Width", "Height")
+    OUTPUT_TOOLTIPS = (
+        "Krea 2 Turbo width in pixels, aligned to the Krea 32px bucket grid and capped at 2048.",
+        "Krea 2 Turbo height in pixels, aligned to the Krea 32px bucket grid and capped at 2048.",
+    )
     FUNCTION = "select"
     DESCRIPTION = (
-        "Map a target megapixel value onto a Krea 2 Turbo aspect-ratio family. "
-        "The supplied 1K buckets are preserved, output is aligned to the 32px "
-        "Krea bucket grid, and no dimension can exceed 2048 pixels. "
-        "The selected resolution is shown in the node preview."
+        "Map a target megapixel value onto Krea 2 Turbo's 32px resolution buckets; no generic megapixel rounding is used."
     )
 
     @classmethod
@@ -137,7 +138,8 @@ class Krea2TurboResolutionSelector:
                     list(KREA2_TURBO_ASPECT_RATIOS),
                     {
                         "default": "1:1",
-                        "tooltip": "Krea 2 Turbo fixed aspect-ratio bucket.",
+                        "display_name": "Aspect Ratio",
+                        "tooltip": "Choose one of the eight fixed Krea 2 Turbo aspect-ratio buckets.",
                     },
                 ),
                 "megapixels": (
@@ -147,10 +149,10 @@ class Krea2TurboResolutionSelector:
                         "min": KREA2_TURBO_MIN_MEGAPIXELS,
                         "max": KREA2_TURBO_MAX_MEGAPIXELS,
                         "step": KREA2_TURBO_MEGAPIXEL_STEP,
+                        "display_name": "Megapixels",
                         "tooltip": (
-                            "Target Krea MP. 1.0 returns the supplied 1K anchor; "
-                            "higher values scale toward the 2048px ceiling using the "
-                            "32px Krea bucket grid."
+                            "Target Krea MP; 1.0 preserves the supplied 1K anchor and "
+                            "higher values scale toward the 2048px ceiling."
                         ),
                     },
                 ),

@@ -6,7 +6,7 @@
     "inputs": {
       "main_prompt": {
         "name": "主提示词",
-        "tooltip": "用户提供的原始主提示词。"
+        "tooltip": "用户可编辑的原始主提示词。"
       }
     },
     "outputs": {

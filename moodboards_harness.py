@@ -19,7 +19,7 @@ import json
 import re
 
 
-HARNESS_CATEGORY = "ANe5s节点/Krea2"
+HARNESS_CATEGORY = "ANe5s Nodes/Krea2"
 
 _STYLE_GUIDANCE_LABEL_PATTERN = (
     r"palette|lighting|medium\s+and\s+texture|composition|contrast|"
@@ -212,22 +212,39 @@ class MoodboardsHarness:
         "Metadata JSON",
         "Style-only Positive",
     )
+    OUTPUT_TOOLTIPS = (
+        "Metadata JSON restored to the legacy Krea2 Harness contract.",
+        "Style-only positive extracted from the selected moodboard.",
+    )
     FUNCTION = "adapt"
     DESCRIPTION = (
-        "Compatibility adapter for the GitHub-baseline Krea Moodboard Visual Browser; "
-        "derives style_only_positive and restores the missing user-owned prompt_guidance "
-        "field needed for the legacy Stage 2 prompt contract."
+        "Adapt GitHub-baseline Krea Moodboard Visual Browser outputs to the legacy metadata and style-only-positive contract."
     )
 
     @classmethod
     def INPUT_TYPES(cls):
-        string_input = ("STRING", {"forceInput": True})
+        def string_input(display_name: str, tooltip: str):
+            return (
+                "STRING",
+                {
+                    "forceInput": True,
+                    "display_name": display_name,
+                    "tooltip": tooltip,
+                },
+            )
+
         return {
             "required": {
-                "positive": string_input,
-                "title": string_input,
-                "uuid": string_input,
-                "metadata_json": string_input,
+                "positive": string_input(
+                    "Positive",
+                    "Positive output from the GitHub-baseline Krea Moodboard Visual Browser.",
+                ),
+                "title": string_input("Title", "Selected moodboard title."),
+                "uuid": string_input("UUID", "Selected moodboard UUID."),
+                "metadata_json": string_input(
+                    "Metadata JSON",
+                    "Metadata JSON output from the GitHub-baseline moodboard browser.",
+                ),
             }
         }
 
