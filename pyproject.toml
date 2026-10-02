@@ -21,6 +21,8 @@ Issues = "https://github.com/ANe5s/ComfyUI-Krea2-Harness/issues"
 [tool.comfy]
 PublisherId = "ane5s"
 DisplayName = "Krea2-Harness"
+Icon = "https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/main/assets/registry/Icon.png"
+Banner = "https://raw.githubusercontent.com/ANe5s/ComfyUI-Krea2-Harness/main/assets/registry/Banner.png"
 requires-comfyui = ">=0.3.0"
 includes = [
   "locales/en/main.json",
