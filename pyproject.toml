@@ -1,7 +1,7 @@
 [project]
 name = "ComfyUI-Krea2-Harness"
-version = "0.1.0"
-license = {text = "GPL-3.0-or-later"}
+version = "0.1.1"
+license = {file = "LICENSE"}
 authors = [{name = "ANe5s"}]
 description = "In Krea2 Harness, a short prompt, a moodboard style you like, and an aesthetic LoRA can spark unlimited creativity."
 readme = "README.md"
@@ -17,6 +17,7 @@ classifiers = [
 [project.urls]
 Repository = "https://github.com/ANe5s/ComfyUI-Krea2-Harness"
 Issues = "https://github.com/ANe5s/ComfyUI-Krea2-Harness/issues"
+License = "https://github.com/ANe5s/ComfyUI-Krea2-Harness/blob/main/LICENSE"
 
 [tool.comfy]
 PublisherId = "ane5s"
