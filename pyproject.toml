@@ -1,6 +1,6 @@
 [project]
 name = "ComfyUI-Krea2-Harness"
-version = "0.1.0"
+version = "0.1.261003"
 description = "In Krea2 Harness, a short prompt, a moodboard style you like, and an aesthetic LoRA can spark unlimited creativity."
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
