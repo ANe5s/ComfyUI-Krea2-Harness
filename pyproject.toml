@@ -1,6 +1,6 @@
 [project]
 name = "krea2-harness"
-version = "0.1.0a1"
+version = "0.1.0"
 license = {text = "GPL-3.0-or-later"}
 authors = [{name = "ANe5s"}]
 description = "Krea2 Harness V0.1Alpha production prompt and moodboard nodes for ComfyUI."
@@ -13,6 +13,10 @@ classifiers = [
   "Programming Language :: Python :: 3",
   "Topic :: Multimedia :: Graphics",
 ]
+
+[project.urls]
+Repository = "https://github.com/ANe5s/ComfyUI-Krea2-Harness"
+Issues = "https://github.com/ANe5s/ComfyUI-Krea2-Harness/issues"
 
 [tool.comfy]
 PublisherId = "ane5s"

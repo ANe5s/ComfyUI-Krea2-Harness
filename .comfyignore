@@ -1,0 +1,2 @@
+# GitHub CI files are not needed in the installed ComfyUI node package.
+.github/
