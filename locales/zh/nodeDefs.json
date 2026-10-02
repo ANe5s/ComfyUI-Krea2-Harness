@@ -1,0 +1,160 @@
+{
+  "KreaPrompt": {
+    "display_name": "Krea2提示词",
+    "category": "ANe5s节点/Krea2",
+    "description": "使用一个可编辑的主提示词，构建固定的 Stage 1 V257 角色分离提示词。",
+    "inputs": {
+      "main_prompt": {
+        "name": "主提示词",
+        "tooltip": "用户提供的原始主提示词。"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "合并后的提示词",
+        "tooltip": "发送至文生图提示词节点的角色分离版 Stage 1 V257 提示词。"
+      },
+      "1": {
+        "name": "主提示词",
+        "tooltip": "传递给来源登记与备用角色的原始主提示词。"
+      }
+    }
+  },
+  "KreaPromptMoodboardCompiler": {
+    "display_name": "Krea2提示词情绪板编译",
+    "category": "ANe5s节点/Krea2",
+    "description": "将固定的 Stage 2 V124-RB 系统提示词与原始提示词、清理后提示词和情绪板元数据合并。",
+    "inputs": {
+      "metadata_json": {
+        "name": "元数据JSON",
+        "tooltip": "用于构建风格通道的 Krea 情绪板元数据 JSON。"
+      },
+      "main_prompt": {
+        "name": "主提示词",
+        "tooltip": "作为来源登记保留的原始主提示词。"
+      },
+      "clean_prompt": {
+        "name": "清理后提示词",
+        "tooltip": "作为增强来源使用的 Stage 1 清理后提示词。"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "合并后的提示词",
+        "tooltip": "发送至文生图提示词节点的完整 Stage 2 V124-RB 提示词。"
+      }
+    }
+  },
+  "KreaHarnessPrompt": {
+    "display_name": "Krea2提示词 Harness",
+    "category": "ANe5s节点/Krea2",
+    "description": "清理 Stage 1 V257 生成的提示词；焦点保护与人物侧面眼睛保护固定关闭。",
+    "inputs": {
+      "prompt": {
+        "name": "提示词",
+        "tooltip": "Stage 1 V257 生成的提示词。"
+      },
+      "original_main_prompt": {
+        "name": "原主提示词",
+        "tooltip": "同时用于备用与来源登记角色的原始主提示词。"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "清理后提示词",
+        "tooltip": "Stage 1 清理后的提示词。"
+      }
+    }
+  },
+  "KreaHarnessMoodboard": {
+    "display_name": "Krea2情绪板 Harness",
+    "category": "ANe5s节点/Krea2",
+    "description": "清理最终 Stage 2 V124-RB 提示词，并可追加仅风格情绪板正面条件。",
+    "inputs": {
+      "prompt": {
+        "name": "提示词",
+        "tooltip": "Stage 2 V124-RB 生成的提示词。"
+      },
+      "fallback_prompt": {
+        "name": "备用提示词",
+        "tooltip": "当 Stage 2 返回协议文本或拒答文本时使用的备用提示词。"
+      },
+      "original_main_prompt": {
+        "name": "原主提示词",
+        "tooltip": "焦点保护与人物侧面眼睛保护使用的原始主提示词。"
+      },
+      "metadata_json": {
+        "name": "元数据JSON",
+        "tooltip": "按旧版 style_profile 语义透传的情绪板元数据。"
+      },
+      "style_only_positive": {
+        "name": "仅风格正面条件",
+        "tooltip": "在最终提示词清理后追加的可选仅风格情绪板正面条件。"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "清理后提示词",
+        "tooltip": "最终 Stage 2 清理后的提示词。"
+      }
+    }
+  },
+  "MoodboardsHarness": {
+    "display_name": "Krea2情绪板转换",
+    "category": "ANe5s节点/Krea2",
+    "description": "将 GitHub 基线版 Krea 情绪板可视化浏览器输出转换为旧版元数据与仅风格正面条件契约。",
+    "inputs": {
+      "positive": {
+        "name": "正面条件",
+        "tooltip": "GitHub 基线版 Krea 情绪板可视化浏览器的正面输出。"
+      },
+      "title": {
+        "name": "标题",
+        "tooltip": "所选情绪板标题。"
+      },
+      "uuid": {
+        "name": "UUID",
+        "tooltip": "所选情绪板 UUID。"
+      },
+      "metadata_json": {
+        "name": "元数据JSON",
+        "tooltip": "GitHub 基线版情绪板浏览器输出的元数据 JSON。"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "元数据JSON",
+        "tooltip": "恢复为旧版 Krea2 Harness 契约的元数据 JSON。"
+      },
+      "1": {
+        "name": "仅风格正面条件",
+        "tooltip": "从所选情绪板提取的仅风格正面条件。"
+      }
+    }
+  },
+  "Krea2TurboResolutionSelector": {
+    "display_name": "Krea2分辨率选择",
+    "category": "ANe5s节点/Krea2",
+    "description": "将目标百万像素映射到 Krea 2 Turbo 的 32 像素分辨率桶，不使用通用百万像素四舍五入。",
+    "inputs": {
+      "aspect_ratio": {
+        "name": "宽高比",
+        "tooltip": "选择 Krea 2 Turbo 的八个固定宽高比桶之一。"
+      },
+      "megapixels": {
+        "name": "百万像素",
+        "tooltip": "目标 Krea 百万像素；1.0 保留给定的 1K 锚点，更高值向 2048 像素上限缩放。"
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "宽度",
+        "tooltip": "Krea 2 Turbo 宽度（像素），对齐 Krea 的 32 像素分辨率桶且不超过 2048。"
+      },
+      "1": {
+        "name": "高度",
+        "tooltip": "Krea 2 Turbo 高度（像素），对齐 Krea 的 32 像素分辨率桶且不超过 2048。"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+name: Validate custom node
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate Python syntax, JSON, and package assets
+        shell: python
+        run: |
+          import ast
+          import json
+          import pathlib
+          import tomllib
+
+          root = pathlib.Path('.').resolve()
+          config = tomllib.loads((root / 'pyproject.toml').read_text(encoding='utf-8'))
+          declared = config.get('tool', {}).get('comfy', {}).get('includes', [])
+
+          for path in root.rglob('*.py'):
+              ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
+
+          for path in root.rglob('*.json'):
+              json.loads(path.read_text(encoding='utf-8'))
+
+          missing = [item for item in declared if not (root / item).exists()]
+          if missing:
+              raise SystemExit(f'Missing declared package assets: {missing}')
+
+          forbidden = ('D:' + '/Comfy-Desktop/', 'C:' + '/Users/', 'D:' + '\\Comfy-Desktop\\')
+          for path in root.rglob('*'):
+              if path.is_file() and path.suffix.lower() in {'.py', '.json', '.md', '.toml'}:
+                  text = path.read_text(encoding='utf-8')
+                  if any(value in text for value in forbidden):
+                      raise SystemExit(f'Machine-specific path found in {path}')
+
+          print('Static release validation passed.')

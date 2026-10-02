@@ -1,0 +1,160 @@
+{
+  "KreaPrompt": {
+    "display_name": "Krea2 Prompt",
+    "category": "ANe5s Nodes/Krea2",
+    "description": "Build the fixed Stage 1 V257 role-separated prompt from one editable main prompt.",
+    "inputs": {
+      "main_prompt": {
+        "name": "Main Prompt",
+        "tooltip": "Original main prompt supplied by the user."
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "Merged Prompt",
+        "tooltip": "Role-separated Stage 1 V257 prompt sent to the text-generation node."
+      },
+      "1": {
+        "name": "Main Prompt",
+        "tooltip": "Original main prompt passed to source-ledger and fallback roles."
+      }
+    }
+  },
+  "KreaPromptMoodboardCompiler": {
+    "display_name": "Krea2 Prompt–Moodboard Compiler",
+    "category": "ANe5s Nodes/Krea2",
+    "description": "Compile the fixed Stage 2 V124-RB system prompt with the original prompt, cleaned prompt, and moodboard metadata.",
+    "inputs": {
+      "metadata_json": {
+        "name": "Metadata JSON",
+        "tooltip": "Krea moodboard metadata JSON used to construct the style channels."
+      },
+      "main_prompt": {
+        "name": "Main Prompt",
+        "tooltip": "Original main prompt retained as the source ledger."
+      },
+      "clean_prompt": {
+        "name": "Clean Prompt",
+        "tooltip": "Stage 1 cleaned prompt used as the enhanced source."
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "Merged Prompt",
+        "tooltip": "Complete Stage 2 V124-RB prompt sent to the text-generation node."
+      }
+    }
+  },
+  "KreaHarnessPrompt": {
+    "display_name": "Krea2 Prompt Harness",
+    "category": "ANe5s Nodes/Krea2",
+    "description": "Clean the Stage 1 V257 generated prompt with focus and profile guards fixed off.",
+    "inputs": {
+      "prompt": {
+        "name": "Prompt",
+        "tooltip": "Stage 1 V257 generated prompt."
+      },
+      "original_main_prompt": {
+        "name": "Original Main Prompt",
+        "tooltip": "Original main prompt used for both fallback and source-ledger roles."
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "Clean Prompt",
+        "tooltip": "Sanitized Stage 1 prompt."
+      }
+    }
+  },
+  "KreaHarnessMoodboard": {
+    "display_name": "Krea2 Moodboard Harness",
+    "category": "ANe5s Nodes/Krea2",
+    "description": "Clean the final Stage 2 V124-RB prompt and optionally append the style-only moodboard positive.",
+    "inputs": {
+      "prompt": {
+        "name": "Prompt",
+        "tooltip": "Stage 2 V124-RB generated prompt."
+      },
+      "fallback_prompt": {
+        "name": "Fallback Prompt",
+        "tooltip": "Fallback prompt used when Stage 2 returns a protocol or refusal transcript."
+      },
+      "original_main_prompt": {
+        "name": "Original Main Prompt",
+        "tooltip": "Original main prompt used by the focus and profile guards."
+      },
+      "metadata_json": {
+        "name": "Metadata JSON",
+        "tooltip": "Moodboard metadata passed through with the legacy style-profile semantics."
+      },
+      "style_only_positive": {
+        "name": "Style-only Positive",
+        "tooltip": "Optional style-only moodboard positive appended after final prompt sanitization."
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "Clean Prompt",
+        "tooltip": "Sanitized final Stage 2 prompt."
+      }
+    }
+  },
+  "MoodboardsHarness": {
+    "display_name": "Krea2 Moodboard Adapter",
+    "category": "ANe5s Nodes/Krea2",
+    "description": "Adapt GitHub-baseline Krea Moodboard Visual Browser outputs to the legacy metadata and style-only-positive contract.",
+    "inputs": {
+      "positive": {
+        "name": "Positive",
+        "tooltip": "Positive output from the GitHub-baseline Krea Moodboard Visual Browser."
+      },
+      "title": {
+        "name": "Title",
+        "tooltip": "Selected moodboard title."
+      },
+      "uuid": {
+        "name": "UUID",
+        "tooltip": "Selected moodboard UUID."
+      },
+      "metadata_json": {
+        "name": "Metadata JSON",
+        "tooltip": "Metadata JSON output from the GitHub-baseline moodboard browser."
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "Metadata JSON",
+        "tooltip": "Metadata JSON restored to the legacy Krea2 Harness contract."
+      },
+      "1": {
+        "name": "Style-only Positive",
+        "tooltip": "Style-only positive extracted from the selected moodboard."
+      }
+    }
+  },
+  "Krea2TurboResolutionSelector": {
+    "display_name": "Krea2 Resolution Selector",
+    "category": "ANe5s Nodes/Krea2",
+    "description": "Map a target megapixel value onto Krea 2 Turbo's 32px resolution buckets; no generic megapixel rounding is used.",
+    "inputs": {
+      "aspect_ratio": {
+        "name": "Aspect Ratio",
+        "tooltip": "Choose one of the eight fixed Krea 2 Turbo aspect-ratio buckets."
+      },
+      "megapixels": {
+        "name": "Megapixels",
+        "tooltip": "Target Krea MP; 1.0 preserves the supplied 1K anchor and higher values scale toward the 2048px ceiling."
+      }
+    },
+    "outputs": {
+      "0": {
+        "name": "Width",
+        "tooltip": "Krea 2 Turbo width in pixels, aligned to the Krea 32px bucket grid and capped at 2048."
+      },
+      "1": {
+        "name": "Height",
+        "tooltip": "Krea 2 Turbo height in pixels, aligned to the Krea 32px bucket grid and capped at 2048."
+      }
+    }
+  }
+}
