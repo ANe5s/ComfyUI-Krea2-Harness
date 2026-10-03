@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.261003
+## 0.1.261004
 
 - Initial standalone Krea2 Harness release for ComfyUI.
 - Added Stage 1 prompt construction and sanitization nodes.
