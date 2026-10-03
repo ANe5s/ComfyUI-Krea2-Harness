@@ -315,9 +315,9 @@ The target megapixel input ranges from 1.0 to 4.0 in increments of 0.1. Above 1.
 
 Drag a JSON file onto the ComfyUI canvas. Chinese and English workflows are included in the `examples` directory:
 
-- **Text-to-image: Default** — [Chinese workflow](examples/krea2_harness_文生图默认_ZH.json) · [English workflow](examples/krea2_harness_T2I_Default_EN.json)
-- **Text-to-image: Two-pass Upscale** — [Chinese workflow](examples/krea2_harness_文生图二次采样放大_ZH.json) · [English workflow](examples/krea2_harness_T2I_Upscale_EN.json)
-- **Image-to-image: Default** — [Chinese workflow](examples/Krea2_Harness_图生图默认_ZH.json) · [English workflow](examples/Krea2_Harness_I2I_Default_EN.json)
+- **Text-to-image: Default** — [Chinese workflow](examples/Krea2_Harness_T2I_Default_ZH.json) · [English workflow](examples/Krea2_Harness_T2I_Default_EN.json)
+- **Text-to-image: Two-pass Upscale** — [Chinese workflow](examples/Krea2_Harness_T2I_Upscale_ZH.json) · [English workflow](examples/Krea2_Harness_T2I_Upscale_EN.json)
+- **Image-to-image: Default** — [Chinese workflow](examples/Krea2_Harness_I2I_Default_ZH.json) · [English workflow](examples/Krea2_Harness_I2I_Default_EN.json)
 
 | Workflow | Additional dependencies |
 | --- | --- |

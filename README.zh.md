@@ -318,9 +318,9 @@ Krea2提示词情绪板编译另有内部的 `KreaMoodboardStyleAdapter`：它�
 
 将 JSON 文件拖入 ComfyUI 画布。中文与英文工作流均包含在 `examples` 目录中：
 
-- **文生图：默认** — [中文工作流](examples/krea2_harness_文生图默认_ZH.json) · [English workflow](examples/krea2_harness_T2I_Default_EN.json)
-- **文生图：二次采样放大** — [中文工作流](examples/krea2_harness_文生图二次采样放大_ZH.json) · [English workflow](examples/krea2_harness_T2I_Upscale_EN.json)
-- **图生图：默认** — [中文工作流](examples/Krea2_Harness_图生图默认_ZH.json) · [English workflow](examples/Krea2_Harness_I2I_Default_EN.json)
+- **文生图：默认** — [中文工作流](examples/Krea2_Harness_T2I_Default_ZH.json) · [English workflow](examples/Krea2_Harness_T2I_Default_EN.json)
+- **文生图：二次采样放大** — [中文工作流](examples/Krea2_Harness_T2I_Upscale_ZH.json) · [English workflow](examples/Krea2_Harness_T2I_Upscale_EN.json)
+- **图生图：默认** — [中文工作流](examples/Krea2_Harness_I2I_Default_ZH.json) · [English workflow](examples/Krea2_Harness_I2I_Default_EN.json)
 
 | 工作流 | 额外依赖 |
 | --- | --- |
