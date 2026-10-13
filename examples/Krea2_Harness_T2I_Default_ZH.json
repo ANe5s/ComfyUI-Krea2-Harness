@@ -621,7 +621,7 @@
     },
     {
       "id": 164,
-      "type": "KreaMoodboardVisualBrowser",
+      "type": "KreaMoodboardVisualBrowserLocal",
       "pos": [
         63.446024949454056,
         34.90367504138878
@@ -664,26 +664,16 @@
           ]
         },
         {
-          "name": "url",
-          "type": "STRING",
-          "links": null
-        },
-        {
           "name": "metadata_json",
           "type": "STRING",
           "links": [
             322
           ]
-        },
-        {
-          "name": "preview",
-          "type": "STRING",
-          "links": null
         }
       ],
       "title": "Krea 情绪板可视化浏览器",
       "properties": {
-        "Node name for S&R": "KreaMoodboardVisualBrowser"
+        "Node name for S&R": "KreaMoodboardVisualBrowserLocal"
       },
       "widgets_values": [
         "",
@@ -691,8 +681,7 @@
         "Cinematic Nocturnal Noir — Emerald Wet Canvas",
         "https://www.krea.ai/moodboard-feed/cinematic-nocturnal-noir-605e1da4-bb9c-5b31-8b49-9099290c6ced",
         "{\"keywords\": [\"cinematic noir lighting\", \"monochromatic cool tones\", \"deep cyan and emerald\", \"high-contrast chiaroscuro\", \"shallow depth of field\", \"low-key moody portraiture\", \"intimate atmospheric narrative\"], \"slug\": \"cinematic-nocturnal-noir-605e1da4-bb9c-5b31-8b49-9099290c6ced\", \"source_summary\": \"A stylized nocturnally lit portrait using intense contrasts between light and dark, emphasized through a limited cool color scheme and textured surfaces.\", \"style_axes\": [\"chiaroscuro\", \"cooler palette\", \"soft focus\", \"silhouette\", \"deep shadow\"], \"title\": \"Cinematic Nocturnal Noir — Emerald Wet Canvas\", \"url\": \"https://www.krea.ai/moodboard-feed/cinematic-nocturnal-noir-605e1da4-bb9c-5b31-8b49-9099290c6ced\", \"uuid\": \"605e1da4-bb9c-5b31-8b49-9099290c6ced\"}",
-        "normal",
-        ""
+        "normal"
       ],
       "widgets_values_named": {
         "query": "",
@@ -1381,10 +1370,10 @@
       "title": "模型与插件链接",
       "properties": {},
       "widgets_values": [
-        "指南：[子图 (Subgraph)](https://docs.comfy.org/interface/features/subgraph)\n\n## 模型链接\n\n关于 BF16 和 NVFP4 版本，请参阅 [Comfy-Org/Krea-2](https://huggingface.co/Comfy-Org/Krea-2)\n\n**diffusion_models**\n\n- [krea2_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/diffusion_models/krea2_turbo_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_4b_bf16.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_bf16.safetensors)\n- [qwen3vl_4b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors)\n\n**loras**\n\n- [m87_lora_v1.safetensors](https://huggingface.co/mgwr/M87/blob/main/m87_lora_v1.safetensors)\n- [realism_engine_krea2_v3.1.safetensors](https://huggingface.co/uzumix/Realism_Engine_Ideogram_4_Krea_2_v3.1/blob/main/realism_engine_krea2_v3.1.safetensors)\n- [youhuabanben_c1-st10000.safetensors](https://www.modelscope.cn/models/xptianshi/youhuabanben)\n\n\n## 模型存放位置\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 diffusion_models/\n│   │   └── krea2_turbo_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_4b_bf16.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 loras/\n│       └── m87_lora_v1.safetensors\n│       └── realism_engine_krea2_v3.1.safetensors\n│       └── youhuabanben_c1-st10000.safetensors\n            \n``` \n\n\n## 报告问题\n\n注意：请先更新 ComfyUI（[指南](https://docs.comfy.org/installation/update_comfyui)）并准备好所需的模型。桌面版/云端版的更新通常基于稳定版本，因此某些仅在 Nightly（每日构建）版本中支持的模型可能尚不可用。\n\n- 无法运行 / 运行时错误：[ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / 前端问题：[ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- 工作流问题：[workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n\n## 插件需求\n- Krea 情绪板 https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards\n- Krea2 Harness https://github.com/ANe5s/ComfyUI-Krea2-Harness"
+        "指南：[子图 (Subgraph)](https://docs.comfy.org/interface/features/subgraph)\n\n## 模型链接\n\n关于 BF16 和 NVFP4 版本，请参阅 [Comfy-Org/Krea-2](https://huggingface.co/Comfy-Org/Krea-2)\n\n**diffusion_models**\n\n- [krea2_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/diffusion_models/krea2_turbo_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_4b_bf16.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_bf16.safetensors)\n- [qwen3vl_4b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors)\n\n**loras**\n\n- [m87_lora_v1.safetensors](https://huggingface.co/mgwr/M87/blob/main/m87_lora_v1.safetensors)\n- [realism_engine_krea2_v3.1.safetensors](https://huggingface.co/uzumix/Realism_Engine_Ideogram_4_Krea_2_v3.1/blob/main/realism_engine_krea2_v3.1.safetensors)\n- [youhuabanben_c1-st10000.safetensors](https://www.modelscope.cn/models/xptianshi/youhuabanben)\n\n\n## 模型存放位置\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 diffusion_models/\n│   │   └── krea2_turbo_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_4b_bf16.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 loras/\n│       └── m87_lora_v1.safetensors\n│       └── realism_engine_krea2_v3.1.safetensors\n│       └── youhuabanben_c1-st10000.safetensors\n            \n``` \n\n\n## 报告问题\n\n注意：请先更新 ComfyUI（[指南](https://docs.comfy.org/installation/update_comfyui)）并准备好所需的模型。桌面版/云端版的更新通常基于稳定版本，因此某些仅在 Nightly（每日构建）版本中支持的模型可能尚不可用。\n\n- 无法运行 / 运行时错误：[ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / 前端问题：[ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- 工作流问题：[workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n\n## 插件需求\n- Krea 情绪板 https://github.com/ANe5s/ComfyUI-Krea-Moodboards-Local\n- Krea2 Harness https://github.com/ANe5s/ComfyUI-Krea2-Harness"
       ],
       "widgets_values_named": {
-        "text": "指南：[子图 (Subgraph)](https://docs.comfy.org/interface/features/subgraph)\n\n## 模型链接\n\n关于 BF16 和 NVFP4 版本，请参阅 [Comfy-Org/Krea-2](https://huggingface.co/Comfy-Org/Krea-2)\n\n**diffusion_models**\n\n- [krea2_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/diffusion_models/krea2_turbo_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_4b_bf16.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_bf16.safetensors)\n- [qwen3vl_4b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors)\n\n**loras**\n\n- [m87_lora_v1.safetensors](https://huggingface.co/mgwr/M87/blob/main/m87_lora_v1.safetensors)\n- [realism_engine_krea2_v3.1.safetensors](https://huggingface.co/uzumix/Realism_Engine_Ideogram_4_Krea_2_v3.1/blob/main/realism_engine_krea2_v3.1.safetensors)\n- [youhuabanben_c1-st10000.safetensors](https://www.modelscope.cn/models/xptianshi/youhuabanben)\n\n\n## 模型存放位置\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 diffusion_models/\n│   │   └── krea2_turbo_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_4b_bf16.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 loras/\n│       └── m87_lora_v1.safetensors\n│       └── realism_engine_krea2_v3.1.safetensors\n│       └── youhuabanben_c1-st10000.safetensors\n            \n``` \n\n\n## 报告问题\n\n注意：请先更新 ComfyUI（[指南](https://docs.comfy.org/installation/update_comfyui)）并准备好所需的模型。桌面版/云端版的更新通常基于稳定版本，因此某些仅在 Nightly（每日构建）版本中支持的模型可能尚不可用。\n\n- 无法运行 / 运行时错误：[ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / 前端问题：[ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- 工作流问题：[workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n\n## 插件需求\n- Krea 情绪板 https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards\n- Krea2 Harness https://github.com/ANe5s/ComfyUI-Krea2-Harness"
+        "text": "指南：[子图 (Subgraph)](https://docs.comfy.org/interface/features/subgraph)\n\n## 模型链接\n\n关于 BF16 和 NVFP4 版本，请参阅 [Comfy-Org/Krea-2](https://huggingface.co/Comfy-Org/Krea-2)\n\n**diffusion_models**\n\n- [krea2_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/diffusion_models/krea2_turbo_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_4b_bf16.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_bf16.safetensors)\n- [qwen3vl_4b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors)\n\n**loras**\n\n- [m87_lora_v1.safetensors](https://huggingface.co/mgwr/M87/blob/main/m87_lora_v1.safetensors)\n- [realism_engine_krea2_v3.1.safetensors](https://huggingface.co/uzumix/Realism_Engine_Ideogram_4_Krea_2_v3.1/blob/main/realism_engine_krea2_v3.1.safetensors)\n- [youhuabanben_c1-st10000.safetensors](https://www.modelscope.cn/models/xptianshi/youhuabanben)\n\n\n## 模型存放位置\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 diffusion_models/\n│   │   └── krea2_turbo_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_4b_bf16.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 loras/\n│       └── m87_lora_v1.safetensors\n│       └── realism_engine_krea2_v3.1.safetensors\n│       └── youhuabanben_c1-st10000.safetensors\n            \n``` \n\n\n## 报告问题\n\n注意：请先更新 ComfyUI（[指南](https://docs.comfy.org/installation/update_comfyui)）并准备好所需的模型。桌面版/云端版的更新通常基于稳定版本，因此某些仅在 Nightly（每日构建）版本中支持的模型可能尚不可用。\n\n- 无法运行 / 运行时错误：[ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / 前端问题：[ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- 工作流问题：[workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n\n## 插件需求\n- Krea 情绪板 https://github.com/ANe5s/ComfyUI-Krea-Moodboards-Local\n- Krea2 Harness https://github.com/ANe5s/ComfyUI-Krea2-Harness"
       },
       "color": "#222",
       "bgcolor": "#000"
@@ -1656,7 +1645,7 @@
     [
       322,
       164,
-      5,
+      4,
       148,
       3,
       "STRING"
@@ -2025,7 +2014,7 @@
       "prompt_node": "Krea harness提示词",
       "moodboard_node": "Krea harness情绪板",
       "node_category": "ANe5s节点/Krea2",
-      "moodboard_nodes_source": "comfyui-krea-moodboards (preserved in place)"
+      "moodboard_nodes_source": "ComfyUI-Krea-Moodboards-Local"
     },
     "display_name": "Krea-Harness",
     "plugin": "Krea-Harness",

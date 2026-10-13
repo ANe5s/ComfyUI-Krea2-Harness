@@ -139,7 +139,7 @@
     "inputs": {
       "aspect_ratio": {
         "name": "宽高比",
-        "tooltip": "选择 Krea 2 Turbo 的八个固定宽高比桶之一。"
+        "tooltip": "选择 Krea 2 Turbo 的九个固定宽高比桶之一。"
       },
       "megapixels": {
         "name": "百万像素",

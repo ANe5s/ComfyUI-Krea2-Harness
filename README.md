@@ -32,7 +32,7 @@ I could explain and formally define what Evolution means here. Put plainly, any 
 - **Current version:** 0.1.0
 - **Node category:** Nodes → ANe5s Nodes → Krea2
 - **Runtime dependencies:** No additional Python dependencies
-- **Moodboard browser:** Example workflows require [ComfyUI-Krea-Moodboards](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards) to be installed separately
+- **Moodboard browser:** Example workflows require [ComfyUI-Krea-Moodboards-Local](https://github.com/ANe5s/ComfyUI-Krea-Moodboards-Local) to be installed separately
 
 ## Image Generation Showcase
 
@@ -238,7 +238,7 @@ The external browser’s `negative` output does not pass through this plugin; co
 | ComfyUI | 0.3.0 or later |
 | Additional Python dependencies | None |
 | `TextGenerate` | The example workflows use the ComfyUI core node; use a ComfyUI build that supports the corresponding Qwen3-VL model |
-| Moodboard browser | Example workflows require [ComfyUI-Krea-Moodboards](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards) |
+| Moodboard browser | Example workflows require [ComfyUI-Krea-Moodboards-Local](https://github.com/ANe5s/ComfyUI-Krea-Moodboards-Local) |
 
 ### Installation
 
@@ -300,12 +300,13 @@ The Krea2 Prompt–Moodboard Compiler has a separate internal `KreaMoodboardStyl
 
 | Aspect ratio | Resolution |
 | --- | --- |
-| 1:1 | 1024 × 1024 |
 | 4:3 | 1184 × 896 |
 | 3:2 | 1248 × 832 |
 | 16:9 | 1376 × 768 |
 | 2.35:1 | 1568 × 672 |
+| 1:1 | 1024 × 1024 |
 | 4:5 | 928 × 1152 |
+| 3:4 | 896 × 1184 |
 | 2:3 | 832 × 1248 |
 | 9:16 | 768 × 1376 |
 

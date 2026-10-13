@@ -18,9 +18,39 @@
       "flags": {},
       "order": 0,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "CLIP名称",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "类型",
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "设备",
+          "name": "device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "CLIP",
           "name": "CLIP",
           "type": "CLIP",
           "links": [
@@ -59,9 +89,29 @@
       "flags": {},
       "order": 1,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "UNet名称",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "数据类型",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "模型",
           "name": "MODEL",
           "type": "MODEL",
           "links": [
@@ -95,9 +145,20 @@
       "flags": {},
       "order": 2,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "vae名称",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "VAE",
           "name": "VAE",
           "type": "VAE",
           "links": [
@@ -136,11 +197,13 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "Latent",
           "name": "samples",
           "type": "LATENT",
           "link": 438
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "link": 23
@@ -148,6 +211,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "图像",
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
@@ -176,13 +240,24 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "图片",
           "name": "images",
           "type": "IMAGE",
           "link": 24
+        },
+        {
+          "localized_name": "文件名前缀",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "images",
           "name": "images",
           "type": "IMAGE",
           "links": null
@@ -212,35 +287,41 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "link": 5
         },
         {
+          "localized_name": "图像",
           "name": "image",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "视频",
           "name": "video",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "音频",
           "name": "audio",
           "shape": 7,
           "type": "AUDIO",
           "link": null
         },
         {
+          "localized_name": "system_prompt",
           "name": "system_prompt",
           "shape": 7,
           "type": "STRING",
           "link": null
         },
         {
+          "localized_name": "提示词",
           "name": "prompt",
           "type": "STRING",
           "widget": {
@@ -249,16 +330,121 @@
           "link": 123
         },
         {
+          "localized_name": "最大长度",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "采样模式",
+          "name": "sampling_mode",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "sampling_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "温度",
+          "name": "sampling_mode.temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "sampling_mode.temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "Top K",
+          "name": "sampling_mode.top_k",
+          "type": "INT",
+          "widget": {
+            "name": "sampling_mode.top_k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "Top P",
+          "name": "sampling_mode.top_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "sampling_mode.top_p"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "最小概率",
+          "name": "sampling_mode.min_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "sampling_mode.min_p"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "重复惩罚",
+          "name": "sampling_mode.repetition_penalty",
+          "type": "FLOAT",
+          "widget": {
+            "name": "sampling_mode.repetition_penalty"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "种子",
           "name": "sampling_mode.seed",
           "type": "INT",
           "widget": {
             "name": "sampling_mode.seed"
           },
           "link": 76
+        },
+        {
+          "localized_name": "presence_penalty",
+          "name": "sampling_mode.presence_penalty",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "sampling_mode.presence_penalty"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "思考模式",
+          "name": "thinking",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "thinking"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_default_template",
+          "name": "use_default_template",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_default_template"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mtp",
+          "name": "mtp",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "mtp"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "生成文本",
           "name": "generated_text",
           "type": "STRING",
           "links": [
@@ -266,6 +452,7 @@
           ]
         },
         {
+          "localized_name": "thinking",
           "name": "thinking",
           "type": "STRING",
           "links": null
@@ -324,35 +511,41 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "link": 13
         },
         {
+          "localized_name": "图像",
           "name": "image",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "视频",
           "name": "video",
           "shape": 7,
           "type": "IMAGE",
           "link": null
         },
         {
+          "localized_name": "音频",
           "name": "audio",
           "shape": 7,
           "type": "AUDIO",
           "link": null
         },
         {
+          "localized_name": "system_prompt",
           "name": "system_prompt",
           "shape": 7,
           "type": "STRING",
           "link": null
         },
         {
+          "localized_name": "提示词",
           "name": "prompt",
           "type": "STRING",
           "widget": {
@@ -361,16 +554,121 @@
           "link": 149
         },
         {
+          "localized_name": "最大长度",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "采样模式",
+          "name": "sampling_mode",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "sampling_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "温度",
+          "name": "sampling_mode.temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "sampling_mode.temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "Top K",
+          "name": "sampling_mode.top_k",
+          "type": "INT",
+          "widget": {
+            "name": "sampling_mode.top_k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "Top P",
+          "name": "sampling_mode.top_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "sampling_mode.top_p"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "最小概率",
+          "name": "sampling_mode.min_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "sampling_mode.min_p"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "重复惩罚",
+          "name": "sampling_mode.repetition_penalty",
+          "type": "FLOAT",
+          "widget": {
+            "name": "sampling_mode.repetition_penalty"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "种子",
           "name": "sampling_mode.seed",
           "type": "INT",
           "widget": {
             "name": "sampling_mode.seed"
           },
           "link": 364
+        },
+        {
+          "localized_name": "presence_penalty",
+          "name": "sampling_mode.presence_penalty",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "sampling_mode.presence_penalty"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "思考模式",
+          "name": "thinking",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "thinking"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_default_template",
+          "name": "use_default_template",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_default_template"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mtp",
+          "name": "mtp",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "mtp"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "生成文本",
           "name": "generated_text",
           "type": "STRING",
           "links": [
@@ -378,6 +676,7 @@
           ]
         },
         {
+          "localized_name": "thinking",
           "name": "thinking",
           "type": "STRING",
           "links": null
@@ -434,9 +733,20 @@
       "flags": {},
       "order": 3,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "种子",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "种子",
           "name": "seed",
           "type": "INT",
           "links": [
@@ -470,9 +780,20 @@
       "flags": {},
       "order": 4,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "主提示词",
+          "name": "main_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "main_prompt"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "合并后的提示词",
           "name": "Merged Prompt",
           "type": "STRING",
           "links": [
@@ -480,6 +801,7 @@
           ]
         },
         {
+          "localized_name": "主提示词",
           "name": "Main Prompt",
           "type": "STRING",
           "links": [
@@ -515,16 +837,19 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "元数据JSON",
           "name": "metadata_json",
           "type": "STRING",
           "link": 289
         },
         {
+          "localized_name": "主提示词",
           "name": "main_prompt",
           "type": "STRING",
           "link": 147
         },
         {
+          "localized_name": "清理后提示词",
           "name": "clean_prompt",
           "type": "STRING",
           "link": 299
@@ -532,6 +857,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "合并后的提示词",
           "name": "Merged Prompt",
           "type": "STRING",
           "links": [
@@ -559,21 +885,25 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "正面条件",
           "name": "positive",
           "type": "STRING",
           "link": 319
         },
         {
+          "localized_name": "标题",
           "name": "title",
           "type": "STRING",
           "link": 320
         },
         {
+          "localized_name": "UUID",
           "name": "uuid",
           "type": "STRING",
           "link": 321
         },
         {
+          "localized_name": "元数据JSON",
           "name": "metadata_json",
           "type": "STRING",
           "link": 322
@@ -581,6 +911,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "元数据JSON",
           "name": "Metadata JSON",
           "type": "STRING",
           "links": [
@@ -589,6 +920,7 @@
           ]
         },
         {
+          "localized_name": "仅风格正面条件",
           "name": "Style-only Positive",
           "type": "STRING",
           "links": [
@@ -616,11 +948,13 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "提示词",
           "name": "prompt",
           "type": "STRING",
           "link": 297
         },
         {
+          "localized_name": "原主提示词",
           "name": "original_main_prompt",
           "type": "STRING",
           "link": 298
@@ -628,6 +962,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "清理后提示词",
           "name": "Clean Prompt",
           "type": "STRING",
           "links": [
@@ -656,29 +991,34 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "提示词",
           "name": "prompt",
           "type": "STRING",
           "link": 303
         },
         {
+          "localized_name": "备用提示词",
           "name": "fallback_prompt",
           "shape": 7,
           "type": "STRING",
           "link": 305
         },
         {
+          "localized_name": "原主提示词",
           "name": "original_main_prompt",
           "shape": 7,
           "type": "STRING",
           "link": 304
         },
         {
+          "localized_name": "元数据JSON",
           "name": "metadata_json",
           "shape": 7,
           "type": "STRING",
           "link": 306
         },
         {
+          "localized_name": "仅风格正面条件",
           "name": "style_only_positive",
           "shape": 7,
           "type": "STRING",
@@ -687,6 +1027,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "清理后提示词",
           "name": "Clean Prompt",
           "type": "STRING",
           "links": [
@@ -700,7 +1041,7 @@
     },
     {
       "id": 164,
-      "type": "KreaMoodboardVisualBrowser",
+      "type": "KreaMoodboardVisualBrowserLocal",
       "pos": [
         123.31415622198736,
         31.019463316264424
@@ -743,25 +1084,15 @@
           ]
         },
         {
-          "name": "url",
-          "type": "STRING",
-          "links": null
-        },
-        {
           "name": "metadata_json",
           "type": "STRING",
           "links": [
             322
           ]
-        },
-        {
-          "name": "preview",
-          "type": "STRING",
-          "links": null
         }
       ],
       "properties": {
-        "Node name for S&R": "KreaMoodboardVisualBrowser"
+        "Node name for S&R": "KreaMoodboardVisualBrowserLocal"
       },
       "widgets_values": [
         "",
@@ -769,8 +1100,7 @@
         "Cinematic Nocturnal Noir — Emerald Wet Canvas",
         "https://www.krea.ai/moodboard-feed/cinematic-nocturnal-noir-605e1da4-bb9c-5b31-8b49-9099290c6ced",
         "{\"keywords\": [\"cinematic noir lighting\", \"monochromatic cool tones\", \"deep cyan and emerald\", \"high-contrast chiaroscuro\", \"shallow depth of field\", \"low-key moody portraiture\", \"intimate atmospheric narrative\"], \"slug\": \"cinematic-nocturnal-noir-605e1da4-bb9c-5b31-8b49-9099290c6ced\", \"source_summary\": \"A stylized nocturnally lit portrait using intense contrasts between light and dark, emphasized through a limited cool color scheme and textured surfaces.\", \"style_axes\": [\"chiaroscuro\", \"cooler palette\", \"soft focus\", \"silhouette\", \"deep shadow\"], \"title\": \"Cinematic Nocturnal Noir — Emerald Wet Canvas\", \"url\": \"https://www.krea.ai/moodboard-feed/cinematic-nocturnal-noir-605e1da4-bb9c-5b31-8b49-9099290c6ced\", \"uuid\": \"605e1da4-bb9c-5b31-8b49-9099290c6ced\"}",
-        "normal",
-        ""
+        "normal"
       ],
       "widgets_values_named": {
         "query": "",
@@ -778,8 +1108,7 @@
         "selected_title": "Cinematic Nocturnal Noir — Emerald Wet Canvas",
         "selected_url": "https://www.krea.ai/moodboard-feed/cinematic-nocturnal-noir-605e1da4-bb9c-5b31-8b49-9099290c6ced",
         "selected_metadata_json": "{\"keywords\": [\"cinematic noir lighting\", \"monochromatic cool tones\", \"deep cyan and emerald\", \"high-contrast chiaroscuro\", \"shallow depth of field\", \"low-key moody portraiture\", \"intimate atmospheric narrative\"], \"slug\": \"cinematic-nocturnal-noir-605e1da4-bb9c-5b31-8b49-9099290c6ced\", \"source_summary\": \"A stylized nocturnally lit portrait using intense contrasts between light and dark, emphasized through a limited cool color scheme and textured surfaces.\", \"style_axes\": [\"chiaroscuro\", \"cooler palette\", \"soft focus\", \"silhouette\", \"deep shadow\"], \"title\": \"Cinematic Nocturnal Noir — Emerald Wet Canvas\", \"url\": \"https://www.krea.ai/moodboard-feed/cinematic-nocturnal-noir-605e1da4-bb9c-5b31-8b49-9099290c6ced\", \"uuid\": \"605e1da4-bb9c-5b31-8b49-9099290c6ced\"}",
-        "strength": "normal",
-        "browser": ""
+        "strength": "normal"
       }
     },
     {
@@ -798,6 +1127,7 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "宽度",
           "name": "width",
           "type": "INT",
           "widget": {
@@ -806,16 +1136,27 @@
           "link": 412
         },
         {
+          "localized_name": "高度",
           "name": "height",
           "type": "INT",
           "widget": {
             "name": "height"
           },
           "link": 413
+        },
+        {
+          "localized_name": "批量大小",
+          "name": "batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "Latent",
           "name": "LATENT",
           "type": "LATENT",
           "slot_index": 0,
@@ -854,9 +1195,20 @@
       "flags": {},
       "order": 6,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "种子",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "种子",
           "name": "seed",
           "type": "INT",
           "links": [
@@ -890,9 +1242,29 @@
       "flags": {},
       "order": 7,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "宽高比",
+          "name": "aspect_ratio",
+          "type": "COMBO",
+          "widget": {
+            "name": "aspect_ratio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "百万像素",
+          "name": "megapixels",
+          "type": "FLOAT",
+          "widget": {
+            "name": "megapixels"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "宽度",
           "name": "Width",
           "type": "INT",
           "links": [
@@ -900,6 +1272,7 @@
           ]
         },
         {
+          "localized_name": "高度",
           "name": "Height",
           "type": "INT",
           "links": [
@@ -942,13 +1315,33 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "模型",
           "name": "model",
           "type": "MODEL",
           "link": 460
+        },
+        {
+          "localized_name": "LoRA名称",
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "模型强度",
+          "name": "strength_model",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_model"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "模型",
           "name": "MODEL",
           "type": "MODEL",
           "links": [
@@ -986,18 +1379,21 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "为假时",
           "name": "on_false",
           "shape": 7,
           "type": "STRING",
           "link": 443
         },
         {
+          "localized_name": "为真时",
           "name": "on_true",
           "shape": 7,
           "type": "STRING",
           "link": 464
         },
         {
+          "localized_name": "切换",
           "name": "switch",
           "type": "BOOLEAN",
           "widget": {
@@ -1008,6 +1404,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "输出",
           "name": "output",
           "type": "STRING",
           "links": [
@@ -1041,9 +1438,20 @@
       "flags": {},
       "order": 8,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "值",
+          "name": "value",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "布尔",
           "name": "BOOLEAN",
           "type": "BOOLEAN",
           "links": [
@@ -1081,18 +1489,21 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "为假时",
           "name": "on_false",
           "shape": 7,
           "type": "MODEL",
           "link": 448
         },
         {
+          "localized_name": "为真时",
           "name": "on_true",
           "shape": 7,
           "type": "MODEL",
           "link": 396
         },
         {
+          "localized_name": "切换",
           "name": "switch",
           "type": "BOOLEAN",
           "widget": {
@@ -1103,6 +1514,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "输出",
           "name": "output",
           "type": "MODEL",
           "links": [
@@ -1139,28 +1551,87 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "模型",
           "name": "model",
           "type": "MODEL",
           "link": 445
         },
         {
+          "localized_name": "正面条件",
           "name": "positive",
           "type": "CONDITIONING",
           "link": 419
         },
         {
+          "localized_name": "负面条件",
           "name": "negative",
           "type": "CONDITIONING",
           "link": 420
         },
         {
+          "localized_name": "Latent图像",
           "name": "latent_image",
           "type": "LATENT",
           "link": 440
+        },
+        {
+          "localized_name": "种子",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "步数",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "采样器名称",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "调度器",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "降噪",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "Latent",
           "name": "LATENT",
           "type": "LATENT",
           "links": [
@@ -1206,11 +1677,13 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "像素",
           "name": "pixels",
           "type": "IMAGE",
           "link": 421
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "link": 449
@@ -1218,6 +1691,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "Latent",
           "name": "LATENT",
           "type": "LATENT",
           "links": [
@@ -1245,11 +1719,13 @@
       "mode": 2,
       "inputs": [
         {
+          "localized_name": "像素",
           "name": "pixels",
           "type": "IMAGE",
           "link": 422
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "link": 451
@@ -1257,6 +1733,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "Latent",
           "name": "LATENT",
           "type": "LATENT",
           "links": [
@@ -1287,26 +1764,30 @@
       "inputs": [
         {
           "label": "CLIP",
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "link": 435
         },
         {
-          "label": "Image",
+          "label": "图像",
+          "localized_name": "image",
           "name": "image",
           "shape": 7,
           "type": "IMAGE",
           "link": 423
         },
         {
-          "label": "Image_B",
+          "label": "图像_B",
+          "localized_name": "image_b",
           "name": "image_b",
           "shape": 7,
           "type": "IMAGE",
           "link": 424
         },
         {
-          "label": "Prompt",
+          "label": "提示词",
+          "localized_name": "prompt",
           "name": "prompt",
           "type": "STRING",
           "widget": {
@@ -1315,7 +1796,8 @@
           "link": 437
         },
         {
-          "label": "Anchor Pixels",
+          "label": "锚定像素",
+          "localized_name": "grounding_px",
           "name": "grounding_px",
           "shape": 7,
           "type": "INT",
@@ -1325,7 +1807,8 @@
           "link": null
         },
         {
-          "label": "System Prompt",
+          "label": "系统提示词",
+          "localized_name": "system_prompt",
           "name": "system_prompt",
           "shape": 7,
           "type": "STRING",
@@ -1337,6 +1820,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "条件",
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
@@ -1374,26 +1858,30 @@
       "mode": 0,
       "inputs": [
         {
-          "label": "Model",
+          "label": "模型",
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 444
         },
         {
-          "label": "Source Latent",
+          "label": "源潜空间",
+          "localized_name": "source_latent",
           "name": "source_latent",
           "type": "LATENT",
           "link": 425
         },
         {
-          "label": "Source Latent_B",
+          "label": "源潜空间_B",
+          "localized_name": "source_latent_b",
           "name": "source_latent_b",
           "shape": 7,
           "type": "LATENT",
           "link": 426
         },
         {
-          "label": "Reference Enhance Mask",
+          "label": "参考增强遮罩",
+          "localized_name": "ref_boost_mask",
           "name": "ref_boost_mask",
           "shape": 7,
           "type": "MASK",
@@ -1401,27 +1889,31 @@
         },
         {
           "label": "VAE",
+          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
           "link": 450
         },
         {
-          "label": "Source Image",
+          "label": "源图像",
+          "localized_name": "source_image",
           "name": "source_image",
           "shape": 7,
           "type": "IMAGE",
           "link": 427
         },
         {
-          "label": "Source Image_B",
+          "label": "源图像_B",
+          "localized_name": "source_image_b",
           "name": "source_image_b",
           "shape": 7,
           "type": "IMAGE",
           "link": 428
         },
         {
-          "label": "Reference Enhance",
+          "label": "参考增强",
+          "localized_name": "ref_boost",
           "name": "ref_boost",
           "shape": 7,
           "type": "FLOAT",
@@ -1431,7 +1923,8 @@
           "link": null
         },
         {
-          "label": "Reference Enhance_A",
+          "label": "参考增强_A",
+          "localized_name": "ref_boost_a",
           "name": "ref_boost_a",
           "shape": 7,
           "type": "FLOAT",
@@ -1441,7 +1934,8 @@
           "link": null
         },
         {
-          "label": "Fit Mode",
+          "label": "适配模式",
+          "localized_name": "fit_mode",
           "name": "fit_mode",
           "shape": 7,
           "type": "COMBO",
@@ -1453,6 +1947,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "模型",
           "name": "MODEL",
           "type": "MODEL",
           "links": [
@@ -1488,9 +1983,29 @@
       "flags": {},
       "order": 9,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "图像",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "选择文件上传",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "图像",
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
@@ -1501,6 +2016,7 @@
           ]
         },
         {
+          "localized_name": "遮罩",
           "name": "MASK",
           "type": "MASK",
           "links": []
@@ -1536,9 +2052,29 @@
       "flags": {},
       "order": 10,
       "mode": 2,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "图像",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "选择文件上传",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "图像",
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
@@ -1549,6 +2085,7 @@
           ]
         },
         {
+          "localized_name": "遮罩",
           "name": "MASK",
           "type": "MASK",
           "links": []
@@ -1586,26 +2123,30 @@
       "inputs": [
         {
           "label": "CLIP",
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "link": 434
         },
         {
-          "label": "Image",
+          "label": "图像",
+          "localized_name": "image",
           "name": "image",
           "shape": 7,
           "type": "IMAGE",
           "link": 430
         },
         {
-          "label": "Image_B",
+          "label": "图像_B",
+          "localized_name": "image_b",
           "name": "image_b",
           "shape": 7,
           "type": "IMAGE",
           "link": 431
         },
         {
-          "label": "Prompt",
+          "label": "提示词",
+          "localized_name": "prompt",
           "name": "prompt",
           "type": "STRING",
           "widget": {
@@ -1614,7 +2155,8 @@
           "link": 436
         },
         {
-          "label": "Anchor Pixels",
+          "label": "锚定像素",
+          "localized_name": "grounding_px",
           "name": "grounding_px",
           "shape": 7,
           "type": "INT",
@@ -1624,7 +2166,8 @@
           "link": null
         },
         {
-          "label": "System Prompt",
+          "label": "系统提示词",
+          "localized_name": "system_prompt",
           "name": "system_prompt",
           "shape": 7,
           "type": "STRING",
@@ -1636,6 +2179,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "条件",
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
@@ -1675,6 +2219,7 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "字符串A",
           "name": "string_a",
           "type": "STRING",
           "widget": {
@@ -1683,6 +2228,7 @@
           "link": 458
         },
         {
+          "localized_name": "字符串B",
           "name": "string_b",
           "type": "STRING",
           "widget": {
@@ -1691,7 +2237,8 @@
           "link": 442
         },
         {
-          "label": "Separator",
+          "label": "分隔符",
+          "localized_name": "分隔符",
           "name": "delimiter",
           "type": "STRING",
           "widget": {
@@ -1702,6 +2249,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "字符串",
           "name": "STRING",
           "type": "STRING",
           "links": [
@@ -1741,13 +2289,33 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "模型",
           "name": "model",
           "type": "MODEL",
           "link": 446
+        },
+        {
+          "localized_name": "LoRA名称",
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "模型强度",
+          "name": "strength_model",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_model"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "模型",
           "name": "MODEL",
           "type": "MODEL",
           "links": [
@@ -1789,10 +2357,10 @@
       "title": "Edit Prompt Reference",
       "properties": {},
       "widgets_values": [
-        "## Preserve clothing and pose\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n*******************\n\n## Preserve identity only\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, excluding clothing and pose, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n\n*******************\n\n## 2×2 storyboard example\n(Include some natural language editing prompts within the main prompt to provide guidance!)\n\nRender exactly one 2x2 storyboard grid with four equal panels; use the reference only for the woman's identity; show the same woman in all four panels, with no other people; follow the scene description for everything else. "
+        "## Preserve clothing and pose\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n*******************\n\n## Preserve identity only\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, excluding clothing and pose, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n\n*******************\n\n## 2×2 storyboard example\n（Include some natural language editing prompts within the main prompt to provide guidance！）\n\nRender exactly one 2x2 storyboard grid with four equal panels; use the reference only for the woman's identity; show the same woman in all four panels, with no other people; follow the scene description for everything else. "
       ],
       "widgets_values_named": {
-        "text": "## Preserve clothing and pose\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n*******************\n\n## Preserve identity only\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, excluding clothing and pose, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n\n*******************\n\n## 2×2 storyboard example\n(Include some natural language editing prompts within the main prompt to provide guidance!)\n\nRender exactly one 2x2 storyboard grid with four equal panels; use the reference only for the woman's identity; show the same woman in all four panels, with no other people; follow the scene description for everything else. "
+        "text": "## Preserve clothing and pose\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n*******************\n\n## Preserve identity only\n\nCreate one image of this person as the sole subject in the scene described below; Preserve her recognizable identity from the reference image, including her face, hair, skin tone, and defining features, excluding clothing and pose, while generating a new single coherent scene; Do not reproduce the reference image, its multiple views, panels, borders, crop, or layout; Ensure that only one reference person appears. \n\n\n*******************\n\n## 2×2 storyboard example\n（Include some natural language editing prompts within the main prompt to provide guidance！）\n\nRender exactly one 2x2 storyboard grid with four equal panels; use the reference only for the woman's identity; show the same woman in all four panels, with no other people; follow the scene description for everything else. "
       },
       "color": "#222",
       "bgcolor": "#000"
@@ -1811,9 +2379,20 @@
       "flags": {},
       "order": 12,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "值",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "字符串",
           "name": "STRING",
           "type": "STRING",
           "links": [
@@ -1848,13 +2427,33 @@
       "mode": 4,
       "inputs": [
         {
+          "localized_name": "模型",
           "name": "model",
           "type": "MODEL",
           "link": 459
+        },
+        {
+          "localized_name": "LoRA名称",
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "模型强度",
+          "name": "strength_model",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_model"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "模型",
           "name": "MODEL",
           "type": "MODEL",
           "links": [
@@ -1862,7 +2461,7 @@
           ]
         }
       ],
-      "title": "Style LoRA",
+      "title": "风格LoRA",
       "properties": {
         "Node name for S&R": "LoraLoaderModelOnly",
         "cnr_id": "comfy-core",
@@ -1893,13 +2492,13 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "title": "Model and Plugin Links",
+      "title": "模型与插件链接",
       "properties": {},
       "widgets_values": [
-        "Guide: [Subgraph](https://docs.comfy.org/interface/features/subgraph)\n\n## Model Links\n\nFor BF16 and NVFP4 variants, see [Comfy-Org/Krea-2](https://huggingface.co/Comfy-Org/Krea-2)\n\n**diffusion_models**\n\n- [krea2_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/diffusion_models/krea2_turbo_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_4b_bf16.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_bf16.safetensors)\n- [qwen3vl_4b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors)\n\n**loras**\n\n- [m87_lora_v1.safetensors](https://huggingface.co/mgwr/M87/blob/main/m87_lora_v1.safetensors)\n- [realism_engine_krea2_v3.1.safetensors](https://huggingface.co/uzumix/Realism_Engine_Ideogram_4_Krea_2_v3.1/blob/main/realism_engine_krea2_v3.1.safetensors)\n- [youhuabanben_c1-st10000.safetensors](https://www.modelscope.cn/models/xptianshi/youhuabanben)\n- [krea2_identity_edit_v1_2.safetensors](https://huggingface.co/conradlocke/krea2-identity-edit/blob/main/krea2_identity_edit_v1_2.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 diffusion_models/\n│   │   └── krea2_turbo_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_4b_bf16.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 loras/\n│       └── m87_lora_v1.safetensors\n│       └── realism_engine_krea2_v3.1.safetensors\n│       └── youhuabanben_c1-st10000.safetensors\n│       └── krea2_identity_edit_v1_2.safetensors\n            \n``` \n\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n\n## Plugin Requirements\n- Krea Moodboards https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards\n- Krea2 Harness https://github.com/ANe5s/ComfyUI-Krea2-Harness\n- Krea2 Edit https://github.com/lbouaraba/comfyui-krea2edit"
+        "Guide: [Subgraph](https://docs.comfy.org/interface/features/subgraph)\n\n## Model Links\n\nFor BF16 and NVFP4 variants, see [Comfy-Org/Krea-2](https://huggingface.co/Comfy-Org/Krea-2)\n\n**diffusion_models**\n\n- [krea2_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/diffusion_models/krea2_turbo_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_4b_bf16.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_bf16.safetensors)\n- [qwen3vl_4b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors)\n\n**loras**\n\n- [m87_lora_v1.safetensors](https://huggingface.co/mgwr/M87/blob/main/m87_lora_v1.safetensors)\n- [realism_engine_krea2_v3.1.safetensors](https://huggingface.co/uzumix/Realism_Engine_Ideogram_4_Krea_2_v3.1/blob/main/realism_engine_krea2_v3.1.safetensors)\n- [youhuabanben_c1-st10000.safetensors](https://www.modelscope.cn/models/xptianshi/youhuabanben)\n- [krea2_identity_edit_v1_2.safetensors](https://huggingface.co/conradlocke/krea2-identity-edit/blob/main/krea2_identity_edit_v1_2.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 diffusion_models/\n│   │   └── krea2_turbo_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_4b_bf16.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 loras/\n│       └── m87_lora_v1.safetensors\n│       └── realism_engine_krea2_v3.1.safetensors\n│       └── youhuabanben_c1-st10000.safetensors\n│       └── krea2_identity_edit_v1_2.safetensors\n            \n``` \n\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n\n## Plugin Requirements\n- Krea Moodboards https://github.com/ANe5s/ComfyUI-Krea-Moodboards-Local\n- Krea2 Harness https://github.com/ANe5s/ComfyUI-Krea2-Harness\n- Krea2 Edit https://github.com/lbouaraba/comfyui-krea2edit"
       ],
       "widgets_values_named": {
-        "text": "Guide: [Subgraph](https://docs.comfy.org/interface/features/subgraph)\n\n## Model Links\n\nFor BF16 and NVFP4 variants, see [Comfy-Org/Krea-2](https://huggingface.co/Comfy-Org/Krea-2)\n\n**diffusion_models**\n\n- [krea2_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/diffusion_models/krea2_turbo_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_4b_bf16.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_bf16.safetensors)\n- [qwen3vl_4b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors)\n\n**loras**\n\n- [m87_lora_v1.safetensors](https://huggingface.co/mgwr/M87/blob/main/m87_lora_v1.safetensors)\n- [realism_engine_krea2_v3.1.safetensors](https://huggingface.co/uzumix/Realism_Engine_Ideogram_4_Krea_2_v3.1/blob/main/realism_engine_krea2_v3.1.safetensors)\n- [youhuabanben_c1-st10000.safetensors](https://www.modelscope.cn/models/xptianshi/youhuabanben)\n- [krea2_identity_edit_v1_2.safetensors](https://huggingface.co/conradlocke/krea2-identity-edit/blob/main/krea2_identity_edit_v1_2.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 diffusion_models/\n│   │   └── krea2_turbo_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_4b_bf16.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 loras/\n│       └── m87_lora_v1.safetensors\n│       └── realism_engine_krea2_v3.1.safetensors\n│       └── youhuabanben_c1-st10000.safetensors\n│       └── krea2_identity_edit_v1_2.safetensors\n            \n``` \n\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n\n## Plugin Requirements\n- Krea Moodboards https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards\n- Krea2 Harness https://github.com/ANe5s/ComfyUI-Krea2-Harness\n- Krea2 Edit https://github.com/lbouaraba/comfyui-krea2edit"
+        "text": "Guide: [Subgraph](https://docs.comfy.org/interface/features/subgraph)\n\n## Model Links\n\nFor BF16 and NVFP4 variants, see [Comfy-Org/Krea-2](https://huggingface.co/Comfy-Org/Krea-2)\n\n**diffusion_models**\n\n- [krea2_turbo_int8_convrot.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/diffusion_models/krea2_turbo_int8_convrot.safetensors)\n\n**text_encoders**\n\n- [qwen3vl_4b_bf16.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_bf16.safetensors)\n- [qwen3vl_4b_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/Krea-2/blob/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors)\n\n**vae**\n\n- [qwen_image_vae.safetensors](https://huggingface.co/Comfy-Org/Krea-2/resolve/main/vae/qwen_image_vae.safetensors)\n\n**loras**\n\n- [m87_lora_v1.safetensors](https://huggingface.co/mgwr/M87/blob/main/m87_lora_v1.safetensors)\n- [realism_engine_krea2_v3.1.safetensors](https://huggingface.co/uzumix/Realism_Engine_Ideogram_4_Krea_2_v3.1/blob/main/realism_engine_krea2_v3.1.safetensors)\n- [youhuabanben_c1-st10000.safetensors](https://www.modelscope.cn/models/xptianshi/youhuabanben)\n- [krea2_identity_edit_v1_2.safetensors](https://huggingface.co/conradlocke/krea2-identity-edit/blob/main/krea2_identity_edit_v1_2.safetensors)\n\n\n## Model Storage Location\n\n```\n📂 ComfyUI/\n├── 📂 models/\n│   ├── 📂 diffusion_models/\n│   │   └── krea2_turbo_int8_convrot.safetensors\n│   ├── 📂 text_encoders/\n│   │   └── qwen3vl_4b_bf16.safetensors\n│   ├── 📂 vae/\n│   │   └── qwen_image_vae.safetensors\n│   └── 📂 loras/\n│       └── m87_lora_v1.safetensors\n│       └── realism_engine_krea2_v3.1.safetensors\n│       └── youhuabanben_c1-st10000.safetensors\n│       └── krea2_identity_edit_v1_2.safetensors\n            \n``` \n\n\n## Report Issue\n\nNote: Please update ComfyUI first ([guide](https://docs.comfy.org/installation/update_comfyui)) and prepare required models. Desktop/Cloud updates follow stable releases, so some nightly-supported models may not be available yet.\n\n- Cannot run / runtime errors: [ComfyUI/issues](https://github.com/comfyanonymous/ComfyUI/issues)\n- UI / frontend issues: [ComfyUI_frontend/issues](https://github.com/Comfy-Org/ComfyUI_frontend/issues)\n- Workflow issues: [workflow_templates/issues](https://github.com/Comfy-Org/workflow_templates/issues)\n\n## Plugin Requirements\n- Krea Moodboards https://github.com/ANe5s/ComfyUI-Krea-Moodboards-Local\n- Krea2 Harness https://github.com/ANe5s/ComfyUI-Krea2-Harness\n- Krea2 Edit https://github.com/lbouaraba/comfyui-krea2edit"
       },
       "color": "#222",
       "bgcolor": "#000"
@@ -1922,6 +2521,7 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "字符串A",
           "name": "string_a",
           "type": "STRING",
           "widget": {
@@ -1930,7 +2530,17 @@
           "link": 463
         },
         {
-          "label": "Separator",
+          "localized_name": "字符串B",
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": null
+        },
+        {
+          "label": "分隔符",
+          "localized_name": "分隔符",
           "name": "delimiter",
           "type": "STRING",
           "widget": {
@@ -1941,6 +2551,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "字符串",
           "name": "STRING",
           "type": "STRING",
           "links": [
@@ -1982,10 +2593,10 @@
       "title": "Model and Usage Guide",
       "properties": {},
       "widgets_values": [
-        "# Krea 2 Reference Image Editing\n\n## Single Reference Image\n\n- A: Reference image for the character's identity.\n\n## Dual Reference Image\n\n- A: Scene reference image.\n- B: Character identity reference image.\n\nThe exported workflow records the original local input filenames, but the images are not bundled in the JSON. If ComfyUI reports a missing image, select a scene image and a person reference in the two Load Image nodes before running the workflow.\n\n## How to use\n\n1. Edit \"Krea2 Prompt\". If you have complex requirements, please enter custom natural language prompts in the \"Krea2 Prompt\" field.\n2. Choose a style moodboard in the \"Krea Moodboard Visual Browser\".\n3. Edit \"Edit Prompt\".\n4. Set the aspect ratio and target megapixels, then enable or bypass LoRAs as needed.\n5. Confirm that both reference images are loaded, then queue the workflow.\n\nThe 2×2 storyboard example asks for four equal panels that tell one continuous story; results can vary with the model, reference images, and settings.\n\n## Before running\n\n- Krea 2 Turbo diffusion model, Qwen3-VL text encoder, and Qwen Image VAE.\n- The LoRA weights referenced by the workflow, including the identity-edit LoRA.\n- ComfyUI-Krea2-Harness, a moodboard package that provides Krea Moodboard Visual Browser, and an extension that provides Krea2 Edit nodes.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
+        "# Krea 2 Reference Image Editing\n\n## Single Reference Image\n\n- A: Reference image for the character's identity.\n\n## Dual Reference Image\n\n- A: Scene reference image.\n- B: Character identity reference image.\n\nThe exported workflow records the original local input filenames, but the images are not bundled in the JSON. If ComfyUI reports a missing image, select a scene image and a person reference in the two Load Image nodes before running the workflow.\n\n## How to use\n\n1. Edit「Krea2 Prompt」,If you have complex requirements, please enter custom natural language prompts in the 「Krea2 Prompt」field.\n2. Choose a style moodboard in the「Krea Moodboard Visual Browser」.\n3. Edit「Edit Prompt」.\n4. Set the aspect ratio and target megapixels, then enable or bypass LoRAs as needed.\n5. Confirm that both reference images are loaded, then queue the workflow.\n\nThe 2×2 storyboard example asks for four equal panels that tell one continuous story; results can vary with the model, reference images, and settings.\n\n## Before running\n\n- Krea 2 Turbo diffusion model, Qwen3-VL text encoder, and Qwen Image VAE.\n- The LoRA weights referenced by the workflow, including the identity-edit LoRA.\n- ComfyUI-Krea2-Harness, a moodboard package that provides Krea Moodboard Visual Browser, and an extension that provides Krea2 Edit nodes.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
       ],
       "widgets_values_named": {
-        "text": "# Krea 2 Reference Image Editing\n\n## Single Reference Image\n\n- A: Reference image for the character's identity.\n\n## Dual Reference Image\n\n- A: Scene reference image.\n- B: Character identity reference image.\n\nThe exported workflow records the original local input filenames, but the images are not bundled in the JSON. If ComfyUI reports a missing image, select a scene image and a person reference in the two Load Image nodes before running the workflow.\n\n## How to use\n\n1. Edit \"Krea2 Prompt\". If you have complex requirements, please enter custom natural language prompts in the \"Krea2 Prompt\" field.\n2. Choose a style moodboard in the \"Krea Moodboard Visual Browser\".\n3. Edit \"Edit Prompt\".\n4. Set the aspect ratio and target megapixels, then enable or bypass LoRAs as needed.\n5. Confirm that both reference images are loaded, then queue the workflow.\n\nThe 2×2 storyboard example asks for four equal panels that tell one continuous story; results can vary with the model, reference images, and settings.\n\n## Before running\n\n- Krea 2 Turbo diffusion model, Qwen3-VL text encoder, and Qwen Image VAE.\n- The LoRA weights referenced by the workflow, including the identity-edit LoRA.\n- ComfyUI-Krea2-Harness, a moodboard package that provides Krea Moodboard Visual Browser, and an extension that provides Krea2 Edit nodes.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
+        "text": "# Krea 2 Reference Image Editing\n\n## Single Reference Image\n\n- A: Reference image for the character's identity.\n\n## Dual Reference Image\n\n- A: Scene reference image.\n- B: Character identity reference image.\n\nThe exported workflow records the original local input filenames, but the images are not bundled in the JSON. If ComfyUI reports a missing image, select a scene image and a person reference in the two Load Image nodes before running the workflow.\n\n## How to use\n\n1. Edit「Krea2 Prompt」,If you have complex requirements, please enter custom natural language prompts in the 「Krea2 Prompt」field.\n2. Choose a style moodboard in the「Krea Moodboard Visual Browser」.\n3. Edit「Edit Prompt」.\n4. Set the aspect ratio and target megapixels, then enable or bypass LoRAs as needed.\n5. Confirm that both reference images are loaded, then queue the workflow.\n\nThe 2×2 storyboard example asks for four equal panels that tell one continuous story; results can vary with the model, reference images, and settings.\n\n## Before running\n\n- Krea 2 Turbo diffusion model, Qwen3-VL text encoder, and Qwen Image VAE.\n- The LoRA weights referenced by the workflow, including the identity-edit LoRA.\n- ComfyUI-Krea2-Harness, a moodboard package that provides Krea Moodboard Visual Browser, and an extension that provides Krea2 Edit nodes.\n\nIf a loader shows a missing model, select a compatible file installed on your machine.\n"
       },
       "color": "#222",
       "bgcolor": "#000"
@@ -2115,7 +2726,7 @@
     [
       322,
       164,
-      5,
+      4,
       148,
       3,
       "STRING"
@@ -2413,7 +3024,7 @@
       48,
       0,
       16,
-      6,
+      13,
       "INT"
     ],
     [
@@ -2421,7 +3032,7 @@
       180,
       0,
       23,
-      6,
+      13,
       "INT"
     ],
     [
@@ -2542,14 +3153,14 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5564844140779149,
+      "scale": 0.6733461410342745,
       "offset": [
-        -1737.2632950675634,
-        662.478988226817
+        1210.0946910816565,
+        640.0970849595561
       ]
     },
     "frontendVersion": "1.52.7",
-    "info": "Verified image-to-image workflow with two-stage prompt enhancement and moodboard styling, followed by Krea 2 identity editing. Reference A provides the scene; Reference B provides the subject identity.",
+    "info": "Verified hybrid workflow: Krea2 Moodboard Stage 1/2 text enhancement + Krea2 Identity Edit with scene A and person B.",
     "production": {
       "stage1": "V257",
       "stage1_prompt_file": "prompt_enhancement_stage1_v257_v56_theme_aperture_no_biography.txt",
@@ -2597,12 +3208,12 @@
       "stage1": "V0.1.257",
       "stage2": "V0.1.124",
       "stage2_implementation": "V124-RB",
-      "prompt_node": "Krea2 Prompt Harness",
-      "moodboard_node": "Krea2 Moodboard Harness",
-      "node_category": "ANe5s Nodes/Krea2",
-      "moodboard_nodes_source": "comfyui-krea-moodboards (preserved in place)"
+      "prompt_node": "Krea harness提示词",
+      "moodboard_node": "Krea harness情绪板",
+      "node_category": "ANe5s节点/Krea2",
+      "moodboard_nodes_source": "ComfyUI-Krea-Moodboards-Local"
     },
-    "display_name": "Krea2 Harness - Image-to-Image",
+    "display_name": "Krea-Harness",
     "plugin": "Krea-Harness",
     "verified": {
       "date": "2026-09-10",
@@ -2612,7 +3223,7 @@
       "aspect_ratio": "21:9 (Ultrawide)",
       "megapixels": 2,
       "seed": 202609100202,
-      "validation_output": "Krea2_identity_moodboard_verified_21x9_00001_.png"
+      "validation_output": "D:/Comfy-Desktop/ComfyUI-Shared/output/Krea2_identity_moodboard_verified_21x9_00001_.png"
     }
   },
   "version": 0.4

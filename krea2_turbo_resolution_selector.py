@@ -14,12 +14,13 @@ from __future__ import annotations
 
 
 KREA2_TURBO_ASPECT_RATIOS = (
-    "1:1",
     "4:3",
     "3:2",
     "16:9",
     "2.35:1",
+    "1:1",
     "4:5",
+    "3:4",
     "2:3",
     "9:16",
 )
@@ -29,23 +30,25 @@ KREA2_TURBO_ASPECT_RATIOS = (
 # particular, 1K (4:3) is 1184x896, not the generic ComfyUI 1184x880 result
 # produced by its 16px independent-axis rounding.
 KREA2_TURBO_1K_ANCHORS = {
-    "1:1": (1024, 1024),
     "4:3": (1184, 896),
     "3:2": (1248, 832),
     "16:9": (1376, 768),
     "2.35:1": (1568, 672),
+    "1:1": (1024, 1024),
     "4:5": (928, 1152),
+    "3:4": (896, 1184),
     "2:3": (832, 1248),
     "9:16": (768, 1376),
 }
 
 KREA2_TURBO_ASPECT_VALUES = {
-    "1:1": (1.0, 1.0),
     "4:3": (4.0, 3.0),
     "3:2": (3.0, 2.0),
     "16:9": (16.0, 9.0),
     "2.35:1": (2.35, 1.0),
+    "1:1": (1.0, 1.0),
     "4:5": (4.0, 5.0),
+    "3:4": (3.0, 4.0),
     "2:3": (2.0, 3.0),
     "9:16": (9.0, 16.0),
 }
@@ -139,7 +142,7 @@ class Krea2TurboResolutionSelector:
                     {
                         "default": "1:1",
                         "display_name": "Aspect Ratio",
-                        "tooltip": "Choose one of the eight fixed Krea 2 Turbo aspect-ratio buckets.",
+                        "tooltip": "Choose one of the nine fixed Krea 2 Turbo aspect-ratio buckets.",
                     },
                 ),
                 "megapixels": (

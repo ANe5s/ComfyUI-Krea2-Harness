@@ -32,7 +32,7 @@
 - **当前版本：** 0.1.0
 - **节点类别：** 节点 → ANe5s节点 → Krea2
 - **运行时依赖：** 无额外 Python 依赖
-- **情绪板浏览器：** 示例工作流需要另行安装 [ComfyUI-Krea-Moodboards](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards)
+- **情绪板浏览器：** 示例工作流需要另行安装 [ComfyUI-Krea-Moodboards-Local](https://github.com/ANe5s/ComfyUI-Krea-Moodboards-Local)
 
 ## 生图效果展示
 
@@ -241,7 +241,7 @@ A red bicycle, with a matte finish and visible metal frame details, leans agains
 | ComfyUI | 0.3.0 或更高版本 |
 | 额外 Python 依赖 | 无 |
 | `TextGenerate` | 示例工作流使用 ComfyUI 核心节点；需使用支持相应 Qwen3-VL 模型的 ComfyUI 构建 |
-| 情绪板浏览器 | 示例工作流需要 [ComfyUI-Krea-Moodboards](https://github.com/Andro-Meta/ComfyUI-Krea-Moodboards) |
+| 情绪板浏览器 | 示例工作流需要 [ComfyUI-Krea-Moodboards-Local](https://github.com/ANe5s/ComfyUI-Krea-Moodboards-Local) |
 
 ### 安装
 
@@ -303,12 +303,13 @@ Krea2提示词情绪板编译另有内部的 `KreaMoodboardStyleAdapter`：它�
 
 | 宽高比 | 分辨率 |
 | --- | --- |
-| 1:1 | 1024 × 1024 |
 | 4:3 | 1184 × 896 |
 | 3:2 | 1248 × 832 |
 | 16:9 | 1376 × 768 |
 | 2.35:1 | 1568 × 672 |
+| 1:1 | 1024 × 1024 |
 | 4:5 | 928 × 1152 |
+| 3:4 | 896 × 1184 |
 | 2:3 | 832 × 1248 |
 | 9:16 | 768 × 1376 |
 
