@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added the 3:4 portrait aspect ratio to the Krea 2 Turbo resolution selector.
+
 ## 0.1.261004
 
 - Initial standalone Krea2 Harness release for ComfyUI.
