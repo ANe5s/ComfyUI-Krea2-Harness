@@ -1,8 +1,9 @@
 # Changelog
 
-## Unreleased
+## 0.1.261015
 
 - Added the 3:4 portrait aspect ratio to the Krea 2 Turbo resolution selector.
+- The moodboards in the workflow have been changed to the local version.
 
 ## 0.1.261004
 
